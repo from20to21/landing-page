@@ -7,42 +7,42 @@ $(function () {
 
     $('.menuOpen__home').mouseenter(function () {
         $('.menuSelect__home').css({
-            top: 0
+            left: '25%'
         })
     });
     $('.menuOpen__home').mouseleave(function () {
         $('.menuSelect__home').css({
-            top: '-100%'
+            left: '12.5%'
         })
     });
     $('.menuOpen__about').mouseenter(function () {
         $('.menuSelect__about').css({
-            top: 0
+            left: '37.5%'
         })
     });
     $('.menuOpen__about').mouseleave(function () {
         $('.menuSelect__about').css({
-            top: '-100%'
+            left: '25%'
         })
     });
     $('.menuOpen__project').mouseenter(function () {
         $('.menuSelect__project').css({
-            top: 0
+            left: '50%'
         })
     });
     $('.menuOpen__project').mouseleave(function () {
         $('.menuSelect__project').css({
-            top: '-100%'
+            left: '37.5%'
         })
     });
     $('.menuOpen__contact').mouseenter(function () {
         $('.menuSelect__contact').css({
-            top: 0
+            left: '62.5%'
         })
     });
     $('.menuOpen__contact').mouseleave(function () {
         $('.menuSelect__contact').css({
-            top: '-100%'
+            left: '50%'
         })
     });
 })
@@ -55,27 +55,42 @@ function menuOpen() {
     });
     $('.menuOpen').css({
         display: 'block'
-    })
+    });
     setTimeout(function () {
         $('.menuOpen__home').css({
             left: '25%',
         })
-    }, 500)
+    }, 500);
     setTimeout(function () {
         $('.menuOpen__about').css({
             left: '37.5%',
         })
-    }, 600)
+    }, 600);
     setTimeout(function () {
         $('.menuOpen__project').css({
             left: '50%',
         })
-    }, 700)
+    }, 700);
     setTimeout(function () {
         $('.menuOpen__contact').css({
             left: '62.5%',
         })
-    }, 800)
+    }, 800);
+    setTimeout(function () {
+        $('.menuSelect__home').css({
+            display: 'block'
+        });
+        $('.menuSelect__about').css({
+            display: 'block'
+        });
+        $('.menuSelect__project').css({
+            display: 'block'
+        });
+        $('.menuSelect__contact').css({
+            display: 'block'
+        });
+    }, 500);
+
 }
 function start() {
     $(this).fadeOut();

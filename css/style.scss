@@ -14,27 +14,13 @@
 @mixin bg_center($arg1){
     background: url($arg1) no-repeat center / cover;
 }
-
 .wrapper{
     width: 100%;
     height: 100vh;
     position: relative;
     overflow: hidden;
 }
-.play{
-    @include button_reset();
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    background: #ed924e;
-    position: absolute;
-    left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+
 .background{
     width: 100%;
     height: 100vh;
@@ -44,7 +30,6 @@
 .area{
     width: 12.5%;
     height: 0;
-    border-left: 1px solid #555;
     transition: .1s;
     position: absolute;
     left: 0;top:0;
@@ -80,13 +65,11 @@
         left: 87.5%;
         z-index: 2;
     }
-    &:first-child{
-        border-left: none;
-    }
     &__wrapper{
         width: 0;
         height: 100%;
-        background: #333;
+        background: -webkit-linear-gradient(90deg, rgb(46, 46, 52), rgb(23, 27, 31));
+        background: linear-gradient(90deg, rgb(46, 46, 52), rgb(23, 27, 31));
         transition: 0.3s;
     }
 }
@@ -94,16 +77,16 @@
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    height: 80px;
     position: absolute;
     left: -10%; top: 50%;
     transform: translateY(-50%);
     transition: 1s;
     z-index: 27;
     & h2{
-        font-size: 3rem;
+        font-size: 4rem;
         font-weight: bold;
         color: #fff;
+        margin-bottom: 20px;
     }
     & p{
         display: flex;
@@ -117,73 +100,59 @@
             display: block;
             height: 1.5rem;
             width: 5px;
-            background: #ed924e;
+            background: #d70000;
         }
     }
 }
 .menu{
-    position: absolute;
-    z-index: 3;
-    right: 15%; top: 50%;
-    transform: translateY(-50%);
-    display: none;
-    transition: 1s;
     &__button{
+        position: absolute;
+        z-index: 105;
+        right: 15%; top: 50%;
+        transform: translate(-50%, -50%);
         @include button_reset();
         width: 30px;
         height: 30px;
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: space-between;
-        transform: translateX(-50%);
-            & span{
-                width: 18px;
-                height: 5px;
-                background: #ed924e;
-                &:nth-of-type(2){
-                    width: 30px;
-                }
+        transition: 1s;
+        & span{
+            width: 18px;
+            height: 3px;
+            background: #fff;
+            transition: .5s;
+            &:nth-of-type(2){
+                width: 30px;
             }
-    }
-    &__title{
-        color:#ed924e;
-        transform: rotate(270deg);
+        }
     }
 }
-// .circle01{
-//     width: 600px;
-//     height: 600px;
-//     border-radius: 100%;
-//     position: absolute;
-//     left: 5%; top: 50%;
-//     z-index: 18;
-//     transform: translateY(-50%);
-//     background: none;
-//     border: none
-// }
-// .circle02{
-//     width: 600px;
-//     height: 600px;
-//     border-radius: 100%;
-//     position: absolute;
-//     left: 33.5%; top: 90%;
-//     z-index: 18;
-//     transform: translateY(-50%);
-//     background: none;
-//     border: none
-// }
-
+.menuBackground{
+    width: 0;
+    height: 20vh;
+    position: absolute;
+    z-index: 50;
+    top: 50%; left: 0;
+    background: #d70000;
+    transform: translateY(-50%);
+    mix-blend-mode: color;
+    transition: .5s;
+}
 .menuOpen{
     display: none;
     & a{
         position: absolute;
+        top:50%;
+        transform: translateY(-50%);
         width: 12.5%;
-        height: 100vh;
+        height: 20vh;
         font-size: 2rem;
         font-weight: bold;
         transition: 1s;
         color: #fff;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -202,31 +171,5 @@
     &__contact{
         z-index: 12;
         left: 47.5%;
-    }
-}
-.menuSelect{
-    & div{
-        position: absolute;
-        width: 12.5%;
-        height: 100vh;
-        background: #ed924e;
-        transition: .1s;
-        display: none;
-        &:nth-of-type(1){
-            z-index: 23;
-            left: 12.5%;
-        }
-        &:nth-of-type(2){
-            z-index: 19;
-            left: 25%;
-        }
-        &:nth-of-type(3){
-            z-index: 15;
-            left: 37.5%;
-        }
-        &:nth-of-type(4){
-            z-index: 11;
-            left: 50%;
-        }
     }
 }

@@ -254,6 +254,12 @@ html.search {
         mix-blend-mode: color;
         transition: .1s; }
 
+.redC {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 120; }
+
 .footer {
   width: 12.5%;
   height: 10vh;

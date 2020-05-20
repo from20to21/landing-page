@@ -22,6 +22,8 @@ $(function () {
         });
         //메뉴 hover이벤트 end
     }, 100)
+
+
 });
 var bln = true;
 
@@ -64,22 +66,22 @@ function menuToggle() {
             $('.home').css({
                 left: '-100%'
             })
-        }, 100);
+        }, 350);
         setTimeout(function () {
             $('.about').css({
                 left: '-100%'
             })
-        }, 200);
+        }, 300);
         setTimeout(function () {
             $('.project').css({
                 left: '-100%'
             })
-        }, 300);
+        }, 250);
         setTimeout(function () {
             $('.contact').css({
                 left: '-100%'
             })
-        }, 400);
+        }, 200);
         setTimeout(function () {
             for (var i = 1; i < 9; i++) {
                 var D = reverseDDDG(i, "menu__background");
@@ -90,9 +92,10 @@ function menuToggle() {
             var D = DDDG(i, "background");
             D();
         }
-        $('.redArea').css({
-            width: 0
-        });
+        for (var i = 1; i < 9; i++) {
+            var D = redreverseDDDG(i, "area__wrapper");
+            D();
+        }
         setTimeout(function () {
             $('.area__wrapper').find('a').css({
                 display: 'none',
@@ -166,7 +169,7 @@ function menuToggle() {
             }
         }, 100);
         setTimeout(function () {
-            for (var i = 8; i > 0; i--) {
+            for (var i = 1; i < 9; i++) {
                 var D = redDDDG(i, "area__wrapper");
                 D();
             }
@@ -292,3 +295,13 @@ function reverseDDDG(i, dv) {
         }, 500 + i * 100);
     }
 }
+function redreverseDDDG(i, dv) {
+    return function () {
+        setTimeout(function () {
+            $('.' + dv + ' .area0' + i).css({
+                width: '0'
+            });
+        }, 500 - i * 50);
+    }
+}
+

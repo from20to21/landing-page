@@ -1,6 +1,5 @@
 
 $(function () {
-    $('.menu').load("sub/menu.html");
     setTimeout(function () {
         start(); //시작이벤트 발동
         $('.menu__button').click(menuToggle); //메뉴 열기&닫기

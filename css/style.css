@@ -240,7 +240,8 @@ html.search {
         color: #fff;
         flex-direction: column;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        z-index: 82; }
       .menu__background .area__wrapper .redArea {
         width: 0;
         height: 20vh;

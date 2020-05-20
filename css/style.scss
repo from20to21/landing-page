@@ -143,7 +143,6 @@
         display: flex;
         position: fixed;
         z-index: -1;
-
         & .area{
             width: 12.5%;
             height: 100vh;
@@ -202,6 +201,7 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    z-index: 82;
                 }
                 & .redArea{
                     width: 0;

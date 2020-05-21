@@ -224,20 +224,84 @@ function menuToggle() {
 }
 
 function start() {
-
     setTimeout(function () {
         $('.background').find('h3').css({
             top: '5%'
         });
     }, 2100);
-
     setTimeout(function () {
         $('.background').find('.area01').css({
-            transition: '.5s',
+            transition: '1s',
             width: '87.5%'
         });
     }, 600);
-
+    setTimeout(function () {
+        $('.about__title').find('span').css({
+            top: '18.9%'
+        });
+    }, 2100);
+    setTimeout(function () {
+        $('.about__title').find('span').css({
+            width: '62%',
+            right: '14%'
+        })
+    }, 3100);
+    setTimeout(function () {
+        $('.about__title').find('p').css({
+            top: '10%',
+            opacity: 1
+        });
+    }, 3400);
+    setTimeout(function () {
+        $('.about__title').find('h3').css({
+            top: '14%',
+            opacity: 1
+        });
+    }, 4000);
+    setTimeout(function () {
+        $('.about__spec__title').find('strong').css({
+            opacity: 1
+        });
+        $('.about__spec__edu').find('p').css({
+            opacity: 1
+        });
+        $('.about__spec__career').find('p').css({
+            opacity: 1
+        });
+        $('.about__spec__qualification').find('p').css({
+            opacity: 1
+        });
+        $('.about__spec__github').find('p').css({
+            opacity: 1
+        });
+        $('.question').css({
+            opacity: 1
+        });
+    }, 4400);
+    setTimeout(function () {
+        for (var i = 1; i < 7; i++) {
+            var D = redDotSlide(i, "about__spec__hardSkils");
+            D();
+        }
+    }, 3500);
+    setTimeout(function () {
+        for (var i = 1; i < 6; i++) {
+            var D = redLineSlide(i, "about__spec__hardSkils");
+            D();
+        }
+    }, 4000);
+    setTimeout(function () {
+        for (var i = 1; i < 4; i++) {
+            var D = redDotSlide(i, "about__spec__softSkils");
+            D();
+        }
+    }, 3500);
+    setTimeout(function () {
+        for (var i = 1; i < 3; i++) {
+            var D = redLineSlide(i, "about__spec__softSkils");
+            D();
+        }
+    }, 4000);
 }
 
 function DDDG(i, dv) {
@@ -276,4 +340,52 @@ function redreverseDDDG(i, dv) {
         }, 500 - i * 50);
     }
 }
-
+function redDotSlide(i, dv) {
+    return function () {
+        setTimeout(function () {
+            $('.' + dv + ' .0' + i).css({
+                right: (75 - i * 10) + '%',
+                opacity: 1
+            });
+        }, 500 + i * 500);
+        setTimeout(function () {
+            $('.' + dv + ' .0' + (i + 1)).css({
+                right: (75 - i * 10) + '%'
+            });
+        }, 500 + i * 500);
+        setTimeout(function () {
+            $('.' + dv + ' .0' + (i + 2)).css({
+                right: (75 - i * 10) + '%'
+            });
+        }, 500 + i * 500);
+        setTimeout(function () {
+            $('.' + dv + ' .0' + (i + 3)).css({
+                right: (75 - i * 10) + '%'
+            });
+        }, 500 + i * 500);
+        setTimeout(function () {
+            $('.' + dv + ' .0' + (i + 4)).css({
+                right: (75 - i * 10) + '%'
+            });
+        }, 500 + i * 500);
+        setTimeout(function () {
+            $('.' + dv + ' .0' + (i + 5)).css({
+                right: (75 - i * 10) + '%'
+            });
+        }, 500 + i * 500);
+        setTimeout(function () {
+            $('.' + dv + ' .0' + (i + 6)).css({
+                right: (75 - i * 10) + '%'
+            });
+        }, 500 + i * 500);
+    }
+}
+function redLineSlide(i, dv) {
+    return function () {
+        setTimeout(function () {
+            $('.' + dv).find('.line').css({
+                width: (10 * i) + '%'
+            });
+        }, 500 + i * 500);
+    }
+}

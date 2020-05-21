@@ -218,38 +218,7 @@
         }
     }
 }
-.redC01{
-    position: absolute;
-    top: 50%; left: 5%;
-    z-index: 120;
-    & svg{
-        animation: a 3s infinite;
-    }
-}
-.redC02{
-    position: absolute;
-    top: 50%; left: 39.7%;
-    z-index: 120;
-    & svg{
-        animation: a 3s infinite;
-    }
-}
-.redC03{
-    position: absolute;
-    top: 50%; left: 74.4%;
-    z-index: 120;
-    & svg{
-        animation: a 3s infinite;
-    }
-}
-@keyframes a {
-    0% {
-        transform: translateY(-50%) rotate(0);
-    }
-    100% {
-        transform: translateY(-50%) rotate(360deg);
-    }
-}
+
 .footer{
     width: 12.5%;
     height: 10vh;

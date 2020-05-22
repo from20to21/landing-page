@@ -3,23 +3,6 @@ $(function () {
     setTimeout(function () {
         start(); //시작이벤트 발동
         $('.menu__button').click(menuToggle); //메뉴 열기&닫기
-        //메뉴 hover이벤트
-        $('.area__wrapper').find('a').mouseenter(function () {
-            $('.area__wrapper').find('a').css({
-                opacity: 0.6
-            });
-            $(this).css({
-                opacity: 1,
-                fontSize: '2rem'
-            });
-        });
-        $('.area__wrapper').find('a').mouseleave(function () {
-            $('.area__wrapper').find('a').css({
-                opacity: 1,
-                fontSize: '1.5rem'
-            });
-        });
-        //메뉴 hover이벤트 end
     }, 100)
 });
 var bln = true;
@@ -28,70 +11,21 @@ function menuToggle() {
     if ($('.menu__button').hasClass('open') && bln == false) {
         //버튼 z-index 감소 및 원래모양으로 변형
         $('.menu__button').removeClass('open');
-        $('.menu__button').css({
-            zIndex: 100
-        });
-        $('.menu__button').find('span').css({
-            width: '18px'
-        });
-        $('.firstSpan').css({
-            transform: 'rotate(0) translateY(0)'
-        });
-        $('.secondSpan').css({
-            width: '30px'
-        });
-        $('.thirdSpan').css({
-            transform: 'rotate(0) translateY(0)'
-        });
-        //버튼 z-index 감소 및 원래모양으로 변형 end
-
-        //title 등장
-        setTimeout(function () {
-            $('.title').css({
-                display: 'flex',
-            })
-        }, 600);
-        setTimeout(function () {
-            $('.title').css({
-                left: '15%'
-            })
-        }, 1300);
-        //title 등장 end
 
         //menu__background 사라지기
-        setTimeout(function () {
-            $('.home').css({
-                left: '-100%'
-            })
-        }, 350);
-        setTimeout(function () {
-            $('.about').css({
-                left: '-100%'
-            })
-        }, 300);
-        setTimeout(function () {
-            $('.project').css({
-                left: '-100%'
-            })
-        }, 250);
-        setTimeout(function () {
-            $('.contact').css({
-                left: '-100%'
-            })
-        }, 200);
+        for (var i = 1; i < 5; i++) {
+            var menuOut = menu(i, '-100%', 400, -50);
+            menuOut();
+        }
         setTimeout(function () {
             for (var i = 1; i < 9; i++) {
-                var D = reverseDDDG(i, "menu__background");
-                D();
+                var bgDel = bgShow(i, "menu__background", " .area__wrapper", "translateX(100%)", 0, 100);
+                bgDel();
             }
         }, 100)
         for (var i = 1; i < 9; i++) {
-            var D = DDDG(i, "background");
-            D();
-        }
-        for (var i = 1; i < 9; i++) {
-            var D = redreverseDDDG(i, "area__wrapper");
-            D();
+            var redRev = bgShow(i, "area__wrapper", "", 0, 0, -50);
+            redRev();
         }
         setTimeout(function () {
             $('.area__wrapper').find('a').css({
@@ -99,6 +33,15 @@ function menuToggle() {
             });
         }, 600);
         //menu__background 사라지기 end
+
+
+        //title 등장
+        setTimeout(function () {
+            $('.background').find('h3').css({
+                top: '5%'
+            });
+        }, 500);
+        //title 등장 end
 
         //menu title 퇴장
         $('.menu').find('h3').css({
@@ -110,130 +53,96 @@ function menuToggle() {
         setTimeout(function () {
             $('.menu__background').find('.area__wrapper').css({
                 transform: 'translateX(0)',
-                width: 0
             });
             $('.menu__background').css({
                 zIndex: -1
             });
-        }, 1600)
-        //menu__background 원래위치로 돌려두기;
+        }, 1400)
+        //menu__background 원래위치로 돌려두기 end
+
+        //연속실행 방지
         setTimeout(function () {
             bln = true;
-        }, 2500)
+        }, 2000)
+        //연속실행 방지 end
     }
     if (!$('.menu__button').hasClass('open') && bln == true) {
         $('.menu__button').addClass('open');
         $('.menu__button').css({
             zIndex: 100
         });
-        $('.menu__button').find('span').css({
-            width: '30px'
-        });
-        $('.firstSpan').css({
-            transform: 'rotate(45deg) translateY(18px)'
-        });
-        $('.secondSpan').css({
-            width: 0
-        });
-        $('.thirdSpan').css({
-            transform: 'rotate(-45deg) translateY(-17px)'
-        });
-        //버튼 z-index 증가 및 x모양으로 변형 end
-
-        //title 숨기기
-        setTimeout(function () {
-            $('.title').css({
-                display: 'flex',
-            })
-        }, 300);
-        $('.title').css({
-            left: '-10%'
-        })
-        //title 숨기기 end
 
         //background 등장
         $('.menu__background').css({
             zIndex: 49
         })
-        for (var i = 1; i < 9; i++) {
-            var D = reverseDDDG(i, "background");
-            D();
-        }
         setTimeout(function () {
             for (var i = 1; i < 9; i++) {
-                var D = DDDG(i, "menu__background");
-                D();
+                var menuBgShow = bgShow(i, "menu__background", " .area__wrapper", 0, '100%', 100);
+                menuBgShow();
             }
         }, 100);
         setTimeout(function () {
             for (var i = 1; i < 9; i++) {
-                var D = redDDDG(i, "area__wrapper");
-                D();
+                var redShow = bgShow(i, "area__wrapper", "", 0, '100%', 100);
+                redShow();
             }
         }, 800);
         setTimeout(function () {
-            setTimeout(function () {
-                $('.area__wrapper').find('a').css({
-                    display: 'flex',
-                    zIndex: 82
-                });
-            }, 600);
-            setTimeout(function () {
-                $('.home').css({
-                    left: '50%'
-                })
-            }, 700);
-            setTimeout(function () {
-                $('.about').css({
-                    left: '50%'
-                })
-            }, 800);
-            setTimeout(function () {
-                $('.project').css({
-                    left: '50%'
-                })
-            }, 900);
-            setTimeout(function () {
-                $('.contact').css({
-                    left: '50%'
-                })
-            }, 1000);
+            $('.area__wrapper').find('a').css({
+                display: 'flex',
+                zIndex: 82
+            });
+        }, 1400);
+        setTimeout(function () {
+            for (var i = 1; i < 5; i++) {
+                var menuShow = menu(i, '50%', 600, 100);
+                menuShow();
+            }
         }, 800);
         //background 등장 end
+
+        //title 퇴장
+        $('.background').find('h3').css({
+            top: '-5%'
+        });
+        //title 퇴장 end
 
         //menu title 등장
         setTimeout(function () {
             $('.menu').find('h3').css({
                 top: '5%'
             });
-        }, 2100);
+        }, 500);
         //menu title 등장 end
-        //기존 title 퇴장
-        $('.background').find('h3').css({
-            top: '-5%'
-        });
-        //기존 title 퇴장 end
 
-        //background 원래위치로 돌려두기
-        setTimeout(function () {
-            $('.background').find('.area__wrapper').css({
-                transform: 'translateX(0)',
-                width: 0
-            })
-        }, 1600)
-        //background 원래위치로 돌려두기;
+        //연속실행 방지
         setTimeout(function () {
             bln = false;
-        }, 2500)
+        }, 2000)
+        //연속실행 방지 end
     }
 }
 
 function start() {
+    $('.menu').find('button').css({
+        right: '6.25%'
+    })
     setTimeout(function () {
         $('.background').find('h3').css({
             top: '5%'
         });
-    }, 2100);
+    }, 1300);
+    setTimeout(function () {
+        $('.pic__left').css({
+            transform: 'translateY(0)'
+        });
+    }, 1000);
+    setTimeout(function () {
+        $('.pic__right').css({
+            transform: 'translateY(0)'
+        });
+    }, 1000);
     setTimeout(function () {
         $('.background').find('.area01').css({
             transition: '1s',
@@ -244,25 +153,25 @@ function start() {
         $('.about__title').find('span').css({
             top: '18.9%'
         });
-    }, 2100);
+    }, 1300);
     setTimeout(function () {
         $('.about__title').find('span').css({
             width: '62%',
             right: '14%'
         })
-    }, 3100);
+    }, 1800);
     setTimeout(function () {
         $('.about__title').find('p').css({
             top: '10%',
             opacity: 1
         });
-    }, 3100);
+    }, 2000);
     setTimeout(function () {
         $('.about__title').find('h3').css({
             top: '14%',
             opacity: 1
         });
-    }, 3300);
+    }, 2500);
     setTimeout(function () {
         $('.about__spec__title').find('strong').css({
             opacity: 1
@@ -279,7 +188,7 @@ function start() {
         $('.about__spec__github').find('p').css({
             opacity: 1
         });
-        $('.question').css({
+        $('.askBox').css({
             opacity: 1
         });
     }, 3100);
@@ -288,63 +197,47 @@ function start() {
             var D = redDotSlide(i, "about__spec__hardSkils");
             D();
         }
-    }, 2800);
+    }, 2300);
     setTimeout(function () {
         for (var i = 1; i < 6; i++) {
             var D = redLineSlide(i, "about__spec__hardSkils");
             D();
         }
-    }, 3300);
+    }, 2800);
     setTimeout(function () {
         for (var i = 1; i < 4; i++) {
             var D = redDotSlide(i, "about__spec__softSkils");
             D();
         }
-    }, 2800);
+    }, 2300);
     setTimeout(function () {
         for (var i = 1; i < 3; i++) {
             var D = redLineSlide(i, "about__spec__softSkils");
             D();
         }
-    }, 3300);
+    }, 2800);
 }
 
-function DDDG(i, dv) {
+function bgShow(i, div, find, trans, wid, num) {
     return function () {
         setTimeout(function () {
-            $('.' + dv + ' .area0' + i).find('.area__wrapper').css({
-                width: '100%'
+            $('.' + div + ' .area0' + i + find).css({
+                transform: trans,
+                width: wid
             });
-        }, 500 + i * 100);
+        }, 500 + i * num);
     }
 }
-function redDDDG(i, dv) {
+function menu(i, left, num, num2) {
     return function () {
         setTimeout(function () {
-            $('.' + dv + ' .area0' + i).css({
-                width: '100%'
-            });
-        }, 500 + i * 100);
+            $('.menu__background').find('a.0' + i).css({
+                left: left
+            })
+        }, num + i * num2);
     }
 }
-function reverseDDDG(i, dv) {
-    return function () {
-        setTimeout(function () {
-            $('.' + dv + ' .area0' + i).find('.area__wrapper').css({
-                transform: 'translateX(100%)'
-            });
-        }, 500 + i * 100);
-    }
-}
-function redreverseDDDG(i, dv) {
-    return function () {
-        setTimeout(function () {
-            $('.' + dv + ' .area0' + i).css({
-                width: '0'
-            });
-        }, 500 - i * 50);
-    }
-}
+
 function redDotSlide(i, dv) {
     return function () {
         setTimeout(function () {

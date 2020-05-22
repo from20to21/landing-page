@@ -100,11 +100,11 @@ function menuToggle() {
         }, 600);
         //menu__background 사라지기 end
 
-        //menu title 등장
+        //menu title 퇴장
         $('.menu').find('h3').css({
             top: '-5%'
         });
-        //menu title 등장 end
+        //menu title 퇴장 end
 
         //menu__background 원래위치로 돌려두기
         setTimeout(function () {
@@ -208,6 +208,11 @@ function menuToggle() {
             });
         }, 2100);
         //menu title 등장 end
+        //기존 title 퇴장
+        $('.background').find('h3').css({
+            top: '-5%'
+        });
+        //기존 title 퇴장 end
 
         //background 원래위치로 돌려두기
         setTimeout(function () {
@@ -251,13 +256,13 @@ function start() {
             top: '10%',
             opacity: 1
         });
-    }, 3400);
+    }, 3100);
     setTimeout(function () {
         $('.about__title').find('h3').css({
             top: '14%',
             opacity: 1
         });
-    }, 4000);
+    }, 3300);
     setTimeout(function () {
         $('.about__spec__title').find('strong').css({
             opacity: 1
@@ -277,31 +282,31 @@ function start() {
         $('.question').css({
             opacity: 1
         });
-    }, 4400);
+    }, 3100);
     setTimeout(function () {
         for (var i = 1; i < 7; i++) {
             var D = redDotSlide(i, "about__spec__hardSkils");
             D();
         }
-    }, 3500);
+    }, 2800);
     setTimeout(function () {
         for (var i = 1; i < 6; i++) {
             var D = redLineSlide(i, "about__spec__hardSkils");
             D();
         }
-    }, 4000);
+    }, 3300);
     setTimeout(function () {
         for (var i = 1; i < 4; i++) {
             var D = redDotSlide(i, "about__spec__softSkils");
             D();
         }
-    }, 3500);
+    }, 2800);
     setTimeout(function () {
         for (var i = 1; i < 3; i++) {
             var D = redLineSlide(i, "about__spec__softSkils");
             D();
         }
-    }, 4000);
+    }, 3300);
 }
 
 function DDDG(i, dv) {

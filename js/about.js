@@ -34,7 +34,6 @@ function menuToggle() {
         }, 600);
         //menu__background 사라지기 end
 
-
         //title 등장
         setTimeout(function () {
             $('.background').find('h3').css({
@@ -217,6 +216,17 @@ function start() {
         }
     }, 2800);
 }
+function loop() {
+    var i;
+
+    setTimeout(function () {
+        for (i = 1; i < 4; i++) {
+            var askSlide = askBox(i);
+            askSlide();
+        }
+    }, 2800);
+}
+loop();
 
 function bgShow(i, div, find, trans, wid, num) {
     return function () {
@@ -285,5 +295,28 @@ function redLineSlide(i, dv) {
                 width: (10 * i) + '%'
             });
         }, 500 + i * 500);
+    }
+}
+function askBox(i) {
+    return function () {
+        setTimeout(function () {
+            $('.askBox').css({
+                bottom: (-350 + 150 * i) + 'px'
+            });
+        }, i * 7000);
+        setTimeout(function () {
+            $('.askBox__question__0' + i).css({
+                opacity: 0
+            });
+        }, i * 7000);
+        setTimeout(function () {
+            $('.askBox__question__0' + (i + 1)).css({
+                opacity: 1
+            });
+
+            if (i == 3) {
+                loop();
+            }
+        }, i * 7000);
     }
 }

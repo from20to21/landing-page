@@ -1,5 +1,6 @@
 
 $(function () {
+    $('.menu').load("menu.html"); // menu html 삽입
     setTimeout(function () {
         start(); //시작이벤트 발동
         $('.menu__button').click(menuToggle); //메뉴 열기&닫기
@@ -216,17 +217,6 @@ function start() {
         }
     }, 2800);
 }
-function loop() {
-    var i;
-
-    setTimeout(function () {
-        for (i = 1; i < 4; i++) {
-            var askSlide = askBox(i);
-            askSlide();
-        }
-    }, 2800);
-}
-loop();
 
 function bgShow(i, div, find, trans, wid, num) {
     return function () {
@@ -297,6 +287,18 @@ function redLineSlide(i, dv) {
         }, 500 + i * 500);
     }
 }
+function loop() {
+    var i;
+
+    setTimeout(function () {
+        for (i = 1; i < 4; i++) {
+            var askSlide = askBox(i);
+            askSlide();
+        }
+    }, 2800);
+}
+loop();
+
 function askBox(i) {
     return function () {
         setTimeout(function () {
@@ -313,9 +315,27 @@ function askBox(i) {
             $('.askBox__question__0' + (i + 1)).css({
                 opacity: 1
             });
-
             if (i == 3) {
-                loop();
+                setTimeout(function () {
+                    $('.askBox').css({
+                        transition: '0s cubic-bezier(0.22, 1, 0.36, 1)',
+                        bottom: '-350px'
+                    });
+                    $('.askBox__question__01').css({
+                        opacity: 1
+                    });
+                    setTimeout(function () {
+                        $('.askBox__question__04').css({
+                            opacity: 0
+                        });
+                    }, 500);
+                    loop();
+                    setTimeout(function () {
+                        $('.askBox').css({
+                            transition: '1.5s cubic-bezier(0.22, 1, 0.36, 1)'
+                        });
+                    }, 50); //transition 바꾸는데 깜빡이는 현상 고치고싶은데 고민중
+                }, 1500);
             }
         }, i * 7000);
     }

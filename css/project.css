@@ -261,10 +261,11 @@ html.search {
     transform: rotate(-90deg);
     font-size: 0.9rem;
     font-weight: 400; }
-    .leftTab p:last-of-type {
-      margin: 40px 0;
+    .leftTab p:first-of-type {
       color: #d70000;
       font-weight: bold; }
+    .leftTab p:last-of-type {
+      margin: 40px 0; }
   .leftTab__number {
     width: 15%;
     display: flex;
@@ -277,6 +278,76 @@ html.search {
     .leftTab__number i {
       font-size: 0.7rem;
       color: rgba(255, 255, 255, 0.7); }
+
+.main {
+  width: 30%;
+  height: 100vh;
+  position: absolute;
+  z-index: 50;
+  left: 12.5%; }
+  .main__img {
+    position: absolute;
+    z-index: 40;
+    width: 80%;
+    height: 42%;
+    transform: translate(-50%, -50%); }
+    .main__img.before {
+      top: -15%;
+      left: 50%;
+      filter: grayscale(1) brightness(30%) opacity(60%);
+      background: url("../img/pic_main/bml01.jpg") no-repeat center/cover; }
+    .main__img.selected {
+      width: 100%;
+      height: 80%;
+      top: 50%;
+      left: 50%;
+      filter: brightness(130%);
+      transform: translate(-50%, -50%);
+      background: url("../img/pic_main/zara01.jpg") no-repeat center/cover; }
+    .main__img.after {
+      top: 115%;
+      left: 50%;
+      filter: grayscale(1) brightness(30%) opacity(60%);
+      background: url("../img/pic_main/korea01.jpg") no-repeat center/cover; }
+  .main__title {
+    position: absolute;
+    z-index: 60;
+    color: #fff;
+    font-size: 10rem;
+    font-weight: bold;
+    top: 15%;
+    left: 85%; }
+
+.contents {
+  width: 30%;
+  height: 100vh;
+  position: absolute;
+  z-index: 40;
+  top: 38%;
+  left: 45%;
+  display: flex;
+  flex-direction: column; }
+  .contents strong {
+    position: absolute;
+    z-index: 20;
+    color: #fff;
+    font-weight: 0.9rem; }
+  .contents span {
+    position: absolute;
+    top: 1%;
+    left: -10%;
+    z-index: 10;
+    display: block;
+    width: 35%;
+    height: 0.9rem;
+    background: #d70000; }
+  .contents p {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 0.9rem;
+    margin-bottom: 2%;
+    line-height: 1.2rem; }
+    .contents p:first-of-type {
+      margin-top: 8%; }
 
 .background {
   width: 100%;

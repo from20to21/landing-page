@@ -334,7 +334,7 @@ function askBox(i) {
                         $('.askBox').css({
                             transition: '1.5s cubic-bezier(0.22, 1, 0.36, 1)'
                         });
-                    }, 50); //transition 바꾸는데 깜빡이는 현상 고치고싶은데 고민중
+                    }, 50); //transition 바꾸는데 깜빡이는 현상 고치고싶은데 고민중 -> 애니메이션으로 해결?
                 }, 1500);
             }
         }, i * 7000);

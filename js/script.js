@@ -66,7 +66,7 @@ function menuToggle() {
 
         //background 등장
         $('.menu__background').css({
-            zIndex: 49
+            zIndex: 70
         })
         setTimeout(function () {
             for (var i = 1; i < 9; i++) {

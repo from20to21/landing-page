@@ -74,7 +74,7 @@ function menuToggle() {
 
         //background 등장
         $('.menu__background').css({
-            zIndex: 49
+            zIndex: 70
         })
         setTimeout(function () {
             for (var i = 1; i < 9; i++) {
@@ -125,31 +125,61 @@ function menuToggle() {
 }
 
 function start() {
+    //background 등장
     $('.menu').find('button').css({
         right: '6.25%'
     })
-    setTimeout(function () {
-        $('.background').find('h3').css({
-            top: '5%'
-        });
-    }, 1300);
-    setTimeout(function () {
-        $('.pic__left').css({
-            transform: 'translateY(0)'
-        });
-    }, 1000);
-    setTimeout(function () {
-        $('.pic__right').css({
-            transform: 'translateY(0)'
-        });
-    }, 1000);
     setTimeout(function () {
         $('.background').find('.area01').css({
             transition: '1s',
             width: '87.5%'
         });
     }, 600);
+    setTimeout(function () {
+        $('.background').find('h3').css({
+            top: '5%'
+        });
+    }, 1300);
+    //background 등장 end
+
+    //컨텐츠 등장
+    setTimeout(function () {
+        $('.leftTab').css({
+            left: 0,
+            opacity: 1
+        });
+    }, 1300);
+    setTimeout(function () {
+        $('.main').css({
+            left: '12.5%',
+            opacity: 1
+        });
+    }, 1500);
+    setTimeout(function () {
+        $('.main__title').css({
+            left: '87%',
+            opacity: 1
+        });
+    }, 2000);
+    setTimeout(function () {
+        $('.contents').css({
+            left: '45%',
+            opacity: 1
+        });
+    }, 2500);
+    setTimeout(function () {
+        $('.backNum').css({
+            opacity: 1
+        });
+    }, 3000);
+    //컨텐츠 등장 end
 }
+
+
+
+
+
+
 
 function bgShow(i, div, find, trans, wid, num) {
     return function () {

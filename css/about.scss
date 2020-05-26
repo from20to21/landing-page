@@ -346,48 +346,45 @@
 }
 .askBox{
     position: absolute;
-    bottom: -350px;
+    bottom: -250px;
     right: 18.7%;
     width: 40%;
     z-index: 40;
     opacity: 0;
-    transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1);
-    &__question{
-        display: flex;
-        flex-direction: column;
+    display: flex;
+    flex-direction: column;
         & div{
             width: 100%;
             height: 150px;
-            transition: 1s cubic-bezier(0.22, 1, 0.36, 1);
-            opacity: 0;
-            &:nth-of-type(1){
-                opacity: 1;
-            }
-            & h4{
-                color: #d70000;
-                font-size: 2rem;
-                font-weight: bold;
-                margin-right: 10px;
-                margin-bottom: 20px;
-                display: inline-block;
-            }
-            & strong{
-                font-size: 1.2rem;
-                font-weight: bold;
-                color: rgba(255,255,255,0.8);
-                margin-bottom: 20px;
-            }
-            & p{ 
-                font-size: 0.9rem;
-                line-height: 1.3rem;
-                color: rgba(255,255,255,0.8);
-                text-align: right;
-                font-weight: 100;
-                margin-bottom: 10px;
+            &:nth-last-of-type(2){
+                opacity: 0;
             }
         }
-    }
+        & h4{
+            color: #d70000;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        & strong{
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 20px;
+        }
+        & p{ 
+            font-size: 0.9rem;
+            line-height: 1.3rem;
+            color: rgba(255,255,255,0.8);
+            text-align: right;
+            font-weight: 100;
+            margin-bottom: 10px;
+        }
 }
+    
+
 .background{
     @include size(100%);
     position: relative;

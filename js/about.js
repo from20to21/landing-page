@@ -287,56 +287,24 @@ function redLineSlide(i, dv) {
         }, 500 + i * 500);
     }
 }
-function loop() {
-    var i;
 
-    setTimeout(function () {
-        for (i = 1; i < 4; i++) {
-            var askSlide = askBox(i);
-            askSlide();
-        }
-    }, 2800);
+function askBox() {
+    $('.askBox').find('div').eq(1).css({
+        opacity: 1
+    });
+    $('.askBox').find('div').eq(0).css({
+        opacity: 0
+    });
+    $('.askBox').animate({
+        bottom: -100
+    }, function () {
+        $('.askBox').append($('.askBox').find('div').eq(0));
+        $('.askBox').css({
+            bottom: -250
+        });
+    });
 }
-loop();
 
-function askBox(i) {
-    return function () {
-        setTimeout(function () {
-            $('.askBox').css({
-                bottom: (-350 + 150 * i) + 'px'
-            });
-        }, i * 7000);
-        setTimeout(function () {
-            $('.askBox__question__0' + i).css({
-                opacity: 0
-            });
-        }, i * 7000);
-        setTimeout(function () {
-            $('.askBox__question__0' + (i + 1)).css({
-                opacity: 1
-            });
-            if (i == 3) {
-                setTimeout(function () {
-                    $('.askBox').css({
-                        transition: '0s cubic-bezier(0.22, 1, 0.36, 1)',
-                        bottom: '-350px'
-                    });
-                    $('.askBox__question__01').css({
-                        opacity: 1
-                    });
-                    setTimeout(function () {
-                        $('.askBox__question__04').css({
-                            opacity: 0
-                        });
-                    }, 500);
-                    loop();
-                    setTimeout(function () {
-                        $('.askBox').css({
-                            transition: '1.5s cubic-bezier(0.22, 1, 0.36, 1)'
-                        });
-                    }, 50); //transition 바꾸는데 깜빡이는 현상 고치고싶은데 고민중 -> 애니메이션으로 해결?
-                }, 1500);
-            }
-        }, i * 7000);
-    }
-}
+setInterval(function () {
+    askBox();
+}, 2800);

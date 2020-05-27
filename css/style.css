@@ -71,6 +71,9 @@ html.search {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; }
 
+::selection {
+  background: #d70000; }
+
 .menu h3 {
   position: absolute;
   top: -5%;

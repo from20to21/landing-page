@@ -71,6 +71,9 @@ html.search {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; }
 
+::selection {
+  background: #d70000; }
+
 .menu h3 {
   position: absolute;
   top: -5%;
@@ -215,9 +218,6 @@ html.search {
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.5rem; }
 
-::selection {
-  background: #d70000; }
-
 .wrapper {
   width: 100%;
   height: 100vh;
@@ -235,7 +235,10 @@ html.search {
   align-items: left;
   transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1); }
   .filter__search {
-    position: relative; }
+    position: relative;
+    transform: translateY(-30%);
+    opacity: 0;
+    transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1); }
     .filter__search input {
       border: 1px solid rgba(255, 255, 255, 0.9);
       background: none;
@@ -269,31 +272,34 @@ html.search {
     color: rgba(255, 255, 255, 0.9);
     text-align: left;
     margin-left: 7%;
-    margin-bottom: 15%; }
-  .filter__category {
-    margin-left: 20%; }
-    .filter__category li {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 0.9rem;
-      font-weight: 100;
-      line-height: 1.7rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-right: 30%;
-      margin-bottom: 5%; }
-      .filter__category li:nth-of-type(3) {
-        margin-bottom: 10%; }
-      .filter__category li:nth-of-type(5) {
-        margin-bottom: 10%; }
-      .filter__category li button {
-        border: none;
-        outline-style: none;
-        cursor: pointer;
-        background: none;
-        border: 1px solid rgba(255, 255, 255, 0.9);
-        width: 13px;
-        height: 13px; }
+    margin-bottom: 15%;
+    opacity: 0;
+    transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1); }
+  .filter__category li {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    font-weight: 100;
+    line-height: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -10%;
+    margin-right: 30%;
+    margin-bottom: 5%;
+    opacity: 0;
+    transition: 1s ease-in-out; }
+    .filter__category li:nth-of-type(3) {
+      margin-bottom: 15%; }
+    .filter__category li:nth-of-type(5) {
+      margin-bottom: 15%; }
+    .filter__category li button {
+      border: none;
+      outline-style: none;
+      cursor: pointer;
+      background: none;
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      width: 13px;
+      height: 13px; }
 
 .project {
   position: absolute;
@@ -304,56 +310,70 @@ html.search {
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+  overflow: auto; }
+  .project::-webkit-scrollbar {
+    display: none; }
   .project__contents {
     width: 400px;
     height: 400px;
     background: rgba(137, 137, 137, 0.2);
-    margin-top: 2.5%; }
+    margin-top: 2.5%;
+    position: relative;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1); }
+    .project__contents::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0; }
     .project__contents.contents01 {
-      background: url("../img/pic_main/zara01.jpg") no-repeat center/cover;
-      position: relative; }
+      background: url("../img/pic_main/zara01.jpg") no-repeat center/cover; }
       .project__contents.contents01::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); }
     .project__contents.contents02 {
-      background: url("../img/pic_main/bml01.jpg") no-repeat center/cover;
-      position: relative; }
+      background: url("../img/pic_main/bml01.jpg") no-repeat center/cover; }
       .project__contents.contents02::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
         background: linear-gradient(0deg, rgba(237, 146, 78, 0.8), rgba(237, 146, 78, 0)); }
     .project__contents.contents03 {
-      background: url("../img/pic_main/korea01.jpg") no-repeat center/cover;
-      position: relative; }
+      background: url("../img/pic_main/korea01.jpg") no-repeat center/cover; }
       .project__contents.contents03::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
         background: linear-gradient(0deg, rgba(18, 169, 228, 0.8), rgba(18, 169, 228, 0)); }
     .project__contents.contents04 {
-      background: url("../img/pic_main/portfolio.jpg") no-repeat center/cover;
-      position: relative; }
+      background: url("../img/pic_main/portfolio.jpg") no-repeat center/cover; }
       .project__contents.contents04::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); }
+    .project__contents__title {
+      font-size: 1.6rem;
+      font-weight: bold;
+      position: absolute;
+      z-index: 20;
+      bottom: 18%;
+      left: 5%;
+      color: #333; }
+    .project__contents button {
+      position: absolute;
+      z-index: 20;
+      bottom: 7%;
+      left: 5%;
+      border: none;
+      outline-style: none;
+      cursor: pointer;
+      background: none;
+      width: 30%;
+      height: 30px;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+      border: 1px solid #333; }
+    .project__contents h4 {
+      font-size: 1rem;
+      color: #666;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
 
 .background {
   width: 100%;

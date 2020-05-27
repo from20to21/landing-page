@@ -147,10 +147,41 @@ function start() {
     //background 등장 end
 
     //컨텐츠 등장
-
+    setTimeout(function () {
+        $('.filter__search').css({
+            opacity: 1,
+            transform: 'translateY(0)'
+        });
+        $('.filter__title').css({
+            opacity: 1,
+        });
+    }, 1300);
+    setTimeout(function () {
+        for (var i = 0; i < 7; i++) {
+            var filter = filterShow(i, 'filter__category li', '20%');
+            filter();
+        }
+    }, 2000);
+    setTimeout(function () {
+        for (var i = 0; i < 9; i++) {
+            var filter = filterShow(i, 'project__contents', '0');
+            filter();
+        }
+    }, 3000);
     //컨텐츠 등장 end
 }
 //시작이벤트 end
+
+function filterShow(i, div, num) {
+    return function () {
+        setTimeout(function () {
+            $('.' + div).eq(i).css({
+                marginLeft: num,
+                opacity: 1
+            });
+        }, i * 200);
+    }
+}
 
 function bgShow(i, div, find, trans, wid, num) {
     return function () {

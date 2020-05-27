@@ -25,6 +25,14 @@ font-family: 'Dancing Script', cursive;*/
   width: $wid;
   height: 100vh;
 }
+@mixin box_shadow {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+@mixin absol_center{
+  position: absolute;
+  top:50%; left:50%;
+  transform: translate(-50%,-50%);
+}
 
 *{
   box-sizing: border-box;
@@ -91,7 +99,9 @@ html.search{
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-
+::selection{
+  background: #d70000;
+}
 //menu
 .menu{
   & h3{

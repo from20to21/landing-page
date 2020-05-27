@@ -289,12 +289,12 @@ function redLineSlide(i, dv) {
 }
 
 function askBox() {
-    $('.askBox').find('div').eq(1).css({
+    $('.askBox').find('div').eq(1).animate({
         opacity: 1
     });
-    $('.askBox').find('div').eq(0).css({
+    $('.askBox').find('div').eq(0).animate({
         opacity: 0
-    });
+    }, 300);
     $('.askBox').animate({
         bottom: -100
     }, function () {
@@ -307,4 +307,4 @@ function askBox() {
 
 setInterval(function () {
     askBox();
-}, 2800);
+}, 10000);

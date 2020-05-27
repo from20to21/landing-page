@@ -1,23 +1,4 @@
 @import "_common";
-
-@mixin item_center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@mixin button_reset {
-    border: none;
-    outline-style: none;
-    cursor: pointer;
-    background: none;
-}
-@mixin bg_center($arg1){
-    background: url($arg1) no-repeat center / cover;
-}
-@mixin size($wid) {
-    width: $wid;
-    height: 100vh;
-}
 .wrapper{
     @include size(100%);
     position: relative;

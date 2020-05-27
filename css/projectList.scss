@@ -1,26 +1,5 @@
 @import "_common";
 
-@mixin item_center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@mixin button_reset {
-    border: none;
-    outline-style: none;
-    cursor: pointer;
-    background: none;
-}
-@mixin bg_center($arg1){
-    background: url($arg1) no-repeat center / cover;
-}
-@mixin size($wid) {
-    width: $wid;
-    height: 100vh;
-}
-::selection{
-    background: #d70000;
-}
 .wrapper{
     @include size(100%);
     position: relative;
@@ -37,6 +16,9 @@
     transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1);
     &__search{
         position: relative;
+        transform: translateY(-30%);
+        opacity: 0;
+        transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1);
         & input{
             border: 1px solid rgba(255,255,255,0.9);
             background: none;
@@ -72,9 +54,10 @@
         text-align: left;
         margin-left: 7%;
         margin-bottom: 15%;
+        opacity: 0;
+        transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1);
     }
     &__category{
-        margin-left: 20%;
         & li{
             color:rgba(255,255,255,0.9);
             font-size:0.9rem;
@@ -83,13 +66,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-left: -10%;
             margin-right: 30%;
             margin-bottom: 5%;
+            opacity: 0;
+            transition: 1s ease-in-out;
             &:nth-of-type(3){
-                margin-bottom: 10%;
+                margin-bottom: 15%;
             }
             &:nth-of-type(5){
-                margin-bottom: 10%;
+                margin-bottom: 15%;
             }
             & button{
                 @include button_reset;
@@ -109,60 +95,75 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    overflow: auto;
+    &::-webkit-scrollbar{
+        display: none;
+    }
     &__contents{
         width: 400px;
         height: 400px;
         background: rgba(137,137,137,0.2);
         margin-top: 2.5%;
+        position: relative;
+        opacity: 0;
+        transition: 1s ease-in-out;
+        @include box_shadow;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top:0; left:0;
+        }
         &.contents01{
             @include bg_center('../img/pic_main/zara01.jpg');
-            position: relative;
             &::after{
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top:0; left:0;
                 background: linear-gradient(0deg, rgba(255, 255, 255,0.8), rgba(255, 255, 255,0));
             }
         }
         &.contents02{
             @include bg_center('../img/pic_main/bml01.jpg');
-            position: relative;
             &::after{
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top:0; left:0;
                 background: linear-gradient(0deg, rgba(237, 146, 78,0.8), rgba(237, 146, 78,0));
             }
         }
         &.contents03{
             @include bg_center('../img/pic_main/korea01.jpg');
-            position: relative;
             &::after{
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top:0; left:0;
                 background: linear-gradient(0deg, rgba(18, 169, 228,0.8), rgba(18, 169, 228,0));
             }
         }
         &.contents04{
             @include bg_center('../img/pic_main/portfolio.jpg');
-            position: relative;
             &::after{
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top:0; left:0;
                 background: linear-gradient(0deg, rgba(255, 255, 255,0.8), rgba(255, 255, 255,0));
             }
         }
-        
+        &__title{
+            font-size: 1.6rem;
+            font-weight: bold;
+            position: absolute;
+            z-index: 20;
+            bottom: 18%;
+            left: 5%;
+            color: #333;
+        }
+        & button{
+            position: absolute;
+            z-index: 20;
+            bottom: 7%;
+            left: 5%;
+            @include button_reset;
+            width: 30%;
+            height: 30px;
+            @include box_shadow;
+            border: 1px solid #333;
+        }
+        & h4{
+            font-size: 1rem;
+            color: #666;
+            @include absol_center;
+        }
     }
 }
 .background{

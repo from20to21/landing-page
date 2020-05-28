@@ -195,12 +195,17 @@ xhr.addEventListener('load', function () {
     }
     //시작이벤트 end
 
-    if (a == 1) {
-        console.log(a);
-        $('.contents a').click(function () {
+    $('.contents a').click(function () {
+        if (a == 1) {
             window.open("http://lsh58.github.io/ZARA", "Popup", "width=500,height=800,resizable=no,menubar=no");
-        })
-    }
+        }
+        if (a == 2) {
+            window.open("http://lsh58.github.io/BML", "Popup", "");
+        }
+        if (a == 3) {
+            window.open("http://lsh58.github.io/tour", "Popup", "");
+        }
+    });
 
     function slideInterval() {
         st = setInterval(function () {
@@ -230,6 +235,7 @@ xhr.addEventListener('load', function () {
             $('.leftTab').find('.text0' + a).addClass('selected');
             numChange('leftTab__number', ' .change', '', a);
             numChange('backNum', '', '0', a);
+
         }
         else {
             contentsHide();

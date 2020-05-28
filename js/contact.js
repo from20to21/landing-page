@@ -6,7 +6,7 @@ $(function () {
         $('.menu__button').click(menuToggle); //메뉴 열기&닫기
     }, 100);
 });
-
+var bln = true;
 
 //메뉴 열기&닫기
 function menuToggle() {
@@ -154,7 +154,7 @@ function start() {
     }, 1300);
     setTimeout(function () {
         $('.main').css({
-            left: '12.5%',
+            left: '25%',
             opacity: 1
         });
     }, 2000);

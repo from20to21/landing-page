@@ -117,7 +117,7 @@ function menuToggle() {
 function start() {
     $('.menu').find('button').css({
         right: '6.25%'
-    })
+    });
     setTimeout(function () {
         $('.background').find('h3').css({
             top: '5%'

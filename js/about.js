@@ -1,13 +1,11 @@
 import * as all from './common.js';
 
-console.log(all.start());
-
 $(function () {
     $('.menu').load("menu.html"); // menu html 삽입
     setTimeout(function () {
         all.start(); //시작이벤트 발동
         $('.menu__button').click(all.menuToggle); //메뉴 열기&닫기
-    }, 100)
+    }, 500)
     setInterval(function () {
         askBox();
     }, 10000);

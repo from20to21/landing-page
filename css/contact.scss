@@ -33,7 +33,7 @@
     opacity: 0;
     transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1);
     &__title{
-        width: 60%;
+        width: 57%;
         margin: 10% auto 0;
         display: flex;
         align-items: flex-end;
@@ -60,7 +60,7 @@
         }
     }
     &__info{
-        width: 60%;
+        width: 57%;
         margin: 5% auto 0;
         display: flex;
         flex-direction: column;
@@ -116,12 +116,13 @@
         }
     }
     &__contact{
-        width: 60%;
+        width: 57%;
         margin: 5% auto 0;
         display: flex;
         flex-direction: column;
+        align-items: flex-end;
         &__name{
-            width: 90%;
+            width: 100%;
             display: flex;
             align-items: flex-start;
             border-bottom: 1px solid rgba(255,255,255,0.7);
@@ -152,7 +153,7 @@
         }
         &__mail{
             margin-top: 20px;
-            width: 90%;
+            width: 100%;
             display: flex;
             align-items: flex-start;
             border-bottom: 1px solid rgba(255,255,255,0.7);
@@ -173,7 +174,7 @@
             }
             & input{
                 background: none;
-                width: 90%;
+                width: 85%;
                 margin-left: 10px;
                 height: 30px;
                 color: rgba(255,255,255,0.9);
@@ -183,7 +184,7 @@
         }
         &__content{
             margin-top: 20px;
-            width: 90%;
+            width: 100%;
             display: flex;
             align-items: flex-start;
             border-bottom: 1px solid rgba(255,255,255,0.7);
@@ -216,6 +217,15 @@
                 line-height: 1.4rem;
                 letter-spacing: 0.05rem;
             }
+        }
+        &__send{
+            margin-top: 15px;
+            @include button_reset;
+            color: #d70000;
+            font-weight: 100;
+            font-size: 1.3rem;
+            border-bottom: 1px solid #d70000;
+            width: max-content;
         }
     }
 }

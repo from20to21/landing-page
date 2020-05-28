@@ -255,7 +255,7 @@ html.search {
   opacity: 0;
   transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1); }
   .main__title {
-    width: 60%;
+    width: 57%;
     margin: 10% auto 0;
     display: flex;
     align-items: flex-end; }
@@ -278,7 +278,7 @@ html.search {
       line-height: 1.5rem;
       letter-spacing: 0.1rem; }
   .main__info {
-    width: 60%;
+    width: 57%;
     margin: 5% auto 0;
     display: flex;
     flex-direction: column; }
@@ -326,12 +326,13 @@ html.search {
       .main__info__etc strong:nth-of-type(2) {
         margin-left: 20px; }
   .main__contact {
-    width: 60%;
+    width: 57%;
     margin: 5% auto 0;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: flex-end; }
     .main__contact__name {
-      width: 90%;
+      width: 100%;
       display: flex;
       align-items: flex-start;
       border-bottom: 1px solid rgba(255, 255, 255, 0.7);
@@ -358,7 +359,7 @@ html.search {
         outline: none; }
     .main__contact__mail {
       margin-top: 20px;
-      width: 90%;
+      width: 100%;
       display: flex;
       align-items: flex-start;
       border-bottom: 1px solid rgba(255, 255, 255, 0.7);
@@ -377,7 +378,7 @@ html.search {
         background: #d70000; }
       .main__contact__mail input {
         background: none;
-        width: 90%;
+        width: 85%;
         margin-left: 10px;
         height: 30px;
         color: rgba(255, 255, 255, 0.9);
@@ -385,7 +386,7 @@ html.search {
         outline: none; }
     .main__contact__content {
       margin-top: 20px;
-      width: 90%;
+      width: 100%;
       display: flex;
       align-items: flex-start;
       border-bottom: 1px solid rgba(255, 255, 255, 0.7);
@@ -415,6 +416,17 @@ html.search {
         font-weight: 100;
         line-height: 1.4rem;
         letter-spacing: 0.05rem; }
+    .main__contact__send {
+      margin-top: 15px;
+      border: none;
+      outline-style: none;
+      cursor: pointer;
+      background: none;
+      color: #d70000;
+      font-weight: 100;
+      font-size: 1.3rem;
+      border-bottom: 1px solid #d70000;
+      width: max-content; }
 
 .background {
   width: 100%;

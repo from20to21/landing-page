@@ -153,6 +153,7 @@
            display: flex;
            flex-direction: column;
            position: absolute;
+           z-index: 3;
            top: 30%;
            right: 73%;
            & strong{
@@ -163,13 +164,38 @@
                margin-bottom: 2.5rem;
                opacity: 0;
                transition: 2s cubic-bezier(0.22, 1, 0.36, 1);
+               display: flex;
+               align-items: center;
                &:nth-of-type(1){
                 margin-bottom: 4rem;
                }
                &:nth-of-type(2){
                 margin-bottom: 4rem;
                }
+               & img{
+                   margin-left: 10px;
+                   width: 15px;
+                   opacity: 0.9;
+               }
            }
+        }
+        &__explain{
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            z-index: 2;
+            top: 28%;
+            right: 33%;
+            & p{
+                color: rgba(255,255,255,0.9);
+                font-size: 0.8rem;
+                font-weight: 100;
+                margin-bottom: 4.7rem;
+                letter-spacing: 0.05rem;
+                opacity: 0;
+                transition: 2s cubic-bezier(0.22, 1, 0.36, 1);
+            }
         }
         &__hardSkils{
             & span{
@@ -400,5 +426,21 @@
         font-size: 1.2rem;
         color: rgba(255,255,255,0.9);
         transition:1s cubic-bezier(0.22, 1, 0.36, 1); 
+    }
+    & button{
+        @include button_reset;
+        position: absolute;
+        top: -5%; right: 9.8%;
+        transform: translateX(50%);
+        z-index: 100;
+        width: 25px;
+        height:25px;
+        @include bg_center('/img/next.png');
+        transform: rotate(180deg);
+        transition:1s cubic-bezier(0.22, 1, 0.36, 1); 
+        &:nth-of-type(2){
+            right: 1.5%;
+            transform: rotate(0);
+        }
     }
 }

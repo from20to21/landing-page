@@ -32,6 +32,9 @@ function start() {
         })
     }, 1600);
     //footer 등장 end
+    setTimeout(function () {
+        window.location.href = "sub/about.html";
+    }, 4000);
 }
 
 function bgShow(i, div, find, trans, wid, num) {
@@ -56,9 +59,12 @@ var gradient1 = ctx1.createLinearGradient(280, 340, 680, 940);
 var gradient2 = ctx2.createLinearGradient(880, 340, 1480, 940);
 var gradient3 = ctx3.createLinearGradient(1480, 340, 2080, 940);
 var num = 360;
-g1();
-setTimeout(g2, 3000);
-setTimeout(g3, 6000);
+var num2 = 360;
+var num3 = 270;
+setTimeout(g3, 2000);
+setTimeout(g2, 2200);
+setTimeout(g1, 2500);
+
 setTimeout(cancelAnimationFrame(ani01), 3000);
 function g1() {
     ctx1.beginPath();
@@ -76,43 +82,44 @@ function g1() {
         num = 370;
         ani01 = requestAnimationFrame(g1);
     }
-}-
+}
 
-// function g2() {
-//     ctx2.beginPath();
-//     gradient2.addColorStop("0", "#d70000");
-//     gradient2.addColorStop("1.0", "#970000");
-//     ctx2.lineWidth = 90;
-//     ctx2.strokeStyle = gradient2;
-//     ctx2.arc(1080, 540, 300, (Math.PI / 180) * 0, (Math.PI / 180) * num, true);
-//     ctx2.stroke();
-//     if (num >= 20) {
-//         g2ani = requestAnimationFrame(g2);
-//     } else {
-//         num = 370;
-//         g2ani = requestAnimationFrame(g2);
-//         cancelAnimationFrame(g2ani);
-//     }
-// }
+setTimeout(cancelAnimationFrame(ani02), 3000);
+function g2() {
+    ctx2.beginPath();
+    gradient2.addColorStop("0", "#d70000");
+    gradient2.addColorStop("1.0", "#970000");
+    ctx2.lineWidth = 90;
+    ctx2.strokeStyle = gradient2;
+    num2 -= 10;
+    ctx2.arc(1080, 540, 300, (Math.PI / 180) * 0, (Math.PI / 180) * num2, true);
+    ctx2.stroke();
+    if (num2 >= 20) {
+        var ani02 = requestAnimationFrame(g2);
+    } else {
+        num2 = 370;
+        ani02 = requestAnimationFrame(g2);
+    }
+}
 
-
-// function g3() {
-//     ctx3.beginPath();
-//     gradient3.addColorStop("0", "#d70000");
-//     gradient3.addColorStop("1.0", "#970000");
-//     ctx3.lineWidth = 90;
-//     ctx3.strokeStyle = gradient3;
-//     ctx3.arc(1680, 540, 300, (Math.PI / 180) * 270, (Math.PI / 180) * 90, true);
-//     ctx3.stroke();
-//     if (num >= 20) {
-//         g3ani = requestAnimationFrame(g3);
-//     } else {
-//         num = 370;
-//         g3ani = requestAnimationFrame(g3);
-//         cancelAnimationFrame(g3ani);
-//     }
-// }
-// g3();
+setTimeout(cancelAnimationFrame(ani03), 3000);
+function g3() {
+    ctx3.beginPath();
+    gradient3.addColorStop("0", "#d70000");
+    gradient3.addColorStop("1.0", "#970000");
+    ctx3.lineWidth = 90;
+    ctx3.strokeStyle = gradient3;
+    num3 -= 10;
+    ctx3.arc(1680, 540, 300, (Math.PI / 180) * 270, (Math.PI / 180) * num3, true);
+    ctx3.stroke();
+    if (num3 >= 100) {
+        var ani03 = requestAnimationFrame(g3);
+    } else {
+        num3 = 100;
+        ani03 = requestAnimationFrame(g3);
+    }
+}
+g3();
 //원그리기 end
 
 

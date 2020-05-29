@@ -10,6 +10,10 @@ $(function () {
     setInterval(function () {
         askBox();
     }, 10000);
+    skillEnter('.hardImg', '.hard');
+    skillEnter('.softImg', '.soft');
+    skillLeave('.hardImg', '.hard');
+    skillLeave('.softImg', '.soft');
 });
 
 function start() {
@@ -166,3 +170,17 @@ function askBox() {
     });
 }
 
+function skillEnter(img, text) {
+    $(img).mouseenter(function () {
+        $(text).css({
+            opacity: 1
+        })
+    });
+}
+function skillLeave(img, text) {
+    $(img).mouseleave(function () {
+        $(text).css({
+            opacity: 0
+        })
+    });
+}

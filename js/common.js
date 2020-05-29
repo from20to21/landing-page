@@ -126,6 +126,9 @@ function startCommon() {
         $('.background').find('h3').css({
             top: '5%'
         });
+        $('.background').find('button').css({
+            top: '5%'
+        });
     }, 1300);
 }
 

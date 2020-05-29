@@ -4,6 +4,17 @@
     position: relative;
     overflow: hidden;
 }
+canvas{
+    @include size(100%);
+    background: transparent;
+    position: absolute;
+    z-index: 90;
+}
+.menu{
+    @include size(100%);
+    position: absolute;
+    z-index: 100;
+}
 .background{
     @include size(100%);
     position: relative;

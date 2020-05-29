@@ -7,6 +7,8 @@ $(function () {
         start();//시작이벤트 발동
         $('.menu__button').click(all.menuToggle); //메뉴 열기&닫기
     }, 500);
+    $('.main__contact__name').find('.selected').focus();
+
 });
 
 //시작이벤트
@@ -19,7 +21,6 @@ function start() {
         });
     }, 600);
     //background 등장 end
-
     //컨텐츠 등장
     setTimeout(function () {
         $('.leftTab').css({
@@ -38,3 +39,11 @@ function start() {
 //시작이벤트 end
 
 
+function inputClick() {
+    $('.main__contact div').find('input, textarea').click(function () {
+        $('.main__contact div').find('span').removeClass('selected');
+        $(this).parent().find('span').toggleClass('selected');
+    })
+
+}
+inputClick();

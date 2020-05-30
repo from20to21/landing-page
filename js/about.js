@@ -14,6 +14,12 @@ $(function () {
     skillEnter('.softImg', '.soft');
     skillLeave('.hardImg', '.hard');
     skillLeave('.softImg', '.soft');
+    $('.prev').click(function(){
+        window.location.href="index.html";
+    });
+    $('.next').click(function(){
+        window.location.href="project.html";
+    });
 });
 
 function start() {

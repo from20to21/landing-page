@@ -214,47 +214,21 @@
     color: rgba(255,255,255,0.04);
     @include size(30%);
 }
-.up{
-    position: absolute;
-    right: 10%;
-    top:30%;
-    z-index: 50;
-    opacity: 0;
-    transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1);
-    @include button_reset;
-    animation: btn01 2s infinite ease-in-out;
-    & img{
-        width: 30px;
-        opacity: 0.4;
-    }
-}
 .down{
     position: absolute;
-    right: 10%;
-    top:69%;
-    z-index: 50;
+    left: 27.5%;
+    bottom:6.5%;
+    z-index: 100;
     opacity: 0;
     transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1);
     @include button_reset;
-    animation: btn02 2s infinite ease-in-out;
+    animation: btnAni 2s infinite ease-in-out;
     & img{
         width: 30px;
         opacity: 0.4;
-        transform: rotate(180deg);
     }
 }
-@keyframes btn01{
-    0%{
-        top:30%
-    }
-    50%{
-        top:29%
-    }
-    100%{
-        top:30%
-    }
-}
-@keyframes btn02{
+@keyframes btnAni2{
     0%{
         top:69%
     }

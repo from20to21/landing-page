@@ -127,7 +127,7 @@ function startCommon() {
             top: '5%'
         });
         $('.background').find('button').css({
-            top: '5%'
+            top: '4.8%'
         });
     }, 1300);
 }

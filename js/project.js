@@ -18,7 +18,7 @@ $(function () {
         location.href = 'projectList.html';
     })
 });
-$('.up, .down').on({
+$('.down').on({
     mouseenter: function () {
         clearInterval(st);
     },
@@ -62,8 +62,7 @@ function start() {
             left: '45%',
             opacity: 1
         });
-        $('.up, .down').css({
-            right: '15%',
+        $('.down').css({
             opacity: 1
         });
     }, 3000);
@@ -89,7 +88,7 @@ $('.contents a').click(function () {
 function slideInterval() {
     st = setInterval(function () {
         slide();
-    }, 5000)
+    }, 10000)
 }
 //슬라이드 오토 end
 
@@ -148,16 +147,6 @@ function slide() {
 var blnBtn = true;
 //상하버튼 클릭이벤트
 function Btn() {
-    $('.up').click(function () {
-        if (a == 1) {
-            a = 2;
-            slide();
-        }
-        else {
-            a--;
-            slide();
-        }
-    });
     $('.down').click(function () {
         if (blnBtn == true) {
             blnBtn = false;

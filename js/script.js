@@ -5,6 +5,10 @@ $(function () {
         all.startCommon(); //공통시작이벤트 발동
         start();//시작이벤트 발동
         $('.menu__button').click(all.menuToggle); //메뉴 열기&닫기
+        $('.git').click(function(){
+            var openNewWindow = window.open("about:blank");
+            openNewWindow.location.href="http://github.com/lsh58"
+        }); //깃허브사이트 새창열기
     }, 100)
 });
 
@@ -20,6 +24,7 @@ function start() {
     //title 등장
     setTimeout(function () {
         $('.title').css({
+            opacity:1,
             left: '15%'
         })
     }, 1300);
@@ -32,9 +37,9 @@ function start() {
         })
     }, 1600);
     //footer 등장 end
-    setTimeout(function () {
-        window.location.href = "sub/about.html";
-    }, 4000);
+    // setTimeout(function () {
+    //     window.location.href = "sub/about.html";
+    // }, 4000);
 }
 
 function bgShow(i, div, find, trans, wid, num) {
@@ -65,7 +70,7 @@ setTimeout(g3, 2000);
 setTimeout(g2, 2200);
 setTimeout(g1, 2500);
 
-setTimeout(cancelAnimationFrame(ani01), 3000);
+// 
 function g1() {
     ctx1.beginPath();
     gradient1.addColorStop("0", "#d70000");
@@ -84,7 +89,7 @@ function g1() {
     }
 }
 
-setTimeout(cancelAnimationFrame(ani02), 3000);
+// 
 function g2() {
     ctx2.beginPath();
     gradient2.addColorStop("0", "#d70000");
@@ -102,7 +107,7 @@ function g2() {
     }
 }
 
-setTimeout(cancelAnimationFrame(ani03), 3000);
+// 
 function g3() {
     ctx3.beginPath();
     gradient3.addColorStop("0", "#d70000");
@@ -119,7 +124,6 @@ function g3() {
         ani03 = requestAnimationFrame(g3);
     }
 }
-g3();
 //원그리기 end
 
 
@@ -133,3 +137,8 @@ g3();
 //     }
 // })
 // //메뉴클릭용
+
+
+//파일다운로드 구현
+// $('a#someID').attr({target: '_blank', 
+//                     href  : 'http://localhost/directory/file.pdf'});

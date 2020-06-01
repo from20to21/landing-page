@@ -90,6 +90,7 @@ html.search {
   right: 25%;
   top: 50%;
   transform: translate(50%, -50%);
+  opacity: 0;
   border: none;
   outline-style: none;
   cursor: pointer;
@@ -274,7 +275,7 @@ html.search {
       margin-left: 10px;
       color: rgba(255, 255, 255, 0.9);
       font-weight: 100;
-      font-size: 1.2rem;
+      font-size: 1rem;
       line-height: 1.5rem;
       letter-spacing: 0.1rem; }
   .main__info {
@@ -328,7 +329,7 @@ html.search {
       margin-top: 20px; }
       .main__contact div p {
         margin-left: 5px;
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-weight: 100;
         color: rgba(255, 255, 255, 0.9);
         letter-spacing: 0.1rem;
@@ -434,6 +435,21 @@ html.search {
     font-weight: bold;
     font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.9);
+    transition: 1s cubic-bezier(0.22, 1, 0.36, 1); }
+  .background button {
+    border: none;
+    outline-style: none;
+    cursor: pointer;
+    background: none;
+    position: absolute;
+    top: -5%;
+    right: 9.8%;
+    transform: translateX(50%);
+    z-index: 100;
+    width: 25px;
+    height: 25px;
+    background: url("/img/next.png") no-repeat center/cover;
+    transform: rotate(180deg);
     transition: 1s cubic-bezier(0.22, 1, 0.36, 1); }
 
 /*# sourceMappingURL=contact.css.map */

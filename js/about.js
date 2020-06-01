@@ -20,6 +20,10 @@ $(function () {
     $('.next').click(function(){
         window.location.href="project.html";
     });
+    $('.git').click(function(){
+        var openNewWindow = window.open("about:blank");
+        openNewWindow.location.href="http://github.com/lsh58"
+    }); //깃허브사이트 새창열기
 });
 
 function start() {
@@ -63,7 +67,7 @@ function start() {
         });
     }, 2500);
     setTimeout(function () {
-        $('.about__spec__title').find('strong').css({
+        $('.about__spec__left').find('strong').css({
             opacity: 1
         });
         $('.about__spec__edu').find('p').css({

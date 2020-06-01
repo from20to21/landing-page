@@ -90,6 +90,7 @@ html.search {
   right: 25%;
   top: 50%;
   transform: translate(50%, -50%);
+  opacity: 0;
   border: none;
   outline-style: none;
   cursor: pointer;
@@ -288,9 +289,11 @@ html.search {
     margin-bottom: 5%;
     opacity: 0;
     transition: 1s ease-in-out; }
-    .filter__category li:nth-of-type(3) {
+    .filter__category li:nth-of-type(1) {
       margin-bottom: 15%; }
-    .filter__category li:nth-of-type(5) {
+    .filter__category li:nth-of-type(4) {
+      margin-bottom: 15%; }
+    .filter__category li:nth-of-type(6) {
       margin-bottom: 15%; }
     .filter__category li button {
       border: none;
@@ -299,7 +302,16 @@ html.search {
       background: none;
       border: 1px solid rgba(255, 255, 255, 0.9);
       width: 13px;
-      height: 13px; }
+      height: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .filter__category li button img {
+        opacity: 0;
+        width: 8px; }
+      .filter__category li button.checked img {
+        opacity: 1;
+        width: 8px; }
 
 .project {
   position: absolute;
@@ -366,7 +378,10 @@ html.search {
       width: 30%;
       height: 30px;
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
-      border: 1px solid #333; }
+      border: 1px solid #333;
+      transition: .3s ease-in-out; }
+      .project__contents button:hover {
+        background: rgba(255, 255, 255, 0.9); }
     .project__contents h4 {
       font-size: 1rem;
       color: #666;

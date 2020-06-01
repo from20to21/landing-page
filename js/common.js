@@ -33,6 +33,9 @@ function menuToggle() {
             $('.background').find('h3').css({
                 top: '5%'
             });
+            $('.background').find('button').css({
+                top: '4.8%'
+            });
         }, 500);
         //title 등장 end
 
@@ -99,6 +102,9 @@ function menuToggle() {
         $('.background').find('h3').css({
             top: '-5%'
         });
+        $('.background').find('button').css({
+            top: '-5%'
+        });
         //title 퇴장 end
 
         //menu title 등장
@@ -119,10 +125,11 @@ function menuToggle() {
 //메뉴 열기&닫기 end
 
 function startCommon() {
-    $('.menu').find('button').css({
-        right: '6.25%'
-    });
     setTimeout(function () {
+        $('.menu').find('button').css({
+            opacity:1,
+            right: '6.25%'
+        });
         $('.background').find('h3').css({
             top: '5%'
         });

@@ -1,0 +1,32 @@
+[
+  {
+    "title": "ZARA",
+    "sub": "ZARA 모바일웹 리뉴얼",
+    "date": "2020.04-2020.05",
+    "text": "ZARA 쇼핑몰 사이트를 리뉴얼 하였습니다.<br>모바일 환경일때의 다양한 기능을 사용해보기 위하여<br>모바일전용 웹페이지로 제작하였습니다.",
+    "func": "1. 로딩화면 구현<br> 2. 메인페이지에서 Parallax 기능 구현<br>3. Json을 이용한 데이터 전환 구현 ( 탭에 따른 내용 전환기능)<br>4. 슬라이드기능 구현 <br>5. PHP를 활용한 회원가입페이지 구현<br>",
+    "cross": "Android / iOS",
+    "skill": "HTML / CSS / SCSS / JavaScript / jQuery / Json",
+    "link": "http://lsh58.github.io/ZARA"
+  },
+  {
+    "title": "BML",
+    "sub": "BML 컨셉페이지",
+    "date": "2020.03-2020.04",
+    "text": "Beautiful Mint Life라는 축제의 컨셉형 페이지를 만들었습니다.<br>반응형으로 PC,Tablet,Mobile환경에서 작동하도록 제작하였습니다.",
+    "func": "1. 반응형 (PC/Tablet/Mobile) 구현<br> 2. Json을 이용한 데이터 불러오기 구현<br>3. 그누보드를 활용한 게시판 구현<br>4. 갤러리 기능 구현 <br>",
+    "cross": "Chrome / IE / Firefox / Android / iOS",
+    "skill": "HTML / CSS / JavaScript / Json",
+    "link": "http://tmdgus508.dothome.co.kr/"
+  },
+  {
+    "title": "KTO",
+    "sub": "한국관광공사 사이트 리뉴얼",
+    "date": "2020.02-2020.03",
+    "text": "관공서 사이트인 한국관광공사 사이트를 리뉴얼하였습니다.<br>팀프로젝트로 진행하였고, 첫 웹사이트 작업물입니다.<br> 반응형으로 PC,Tablet,Mobile환경에서 작동하도록 제작하였습니다.",
+    "func": "1. 반응형 (PC/Tablet/Mobile) 구현<br>",
+    "cross": "Chrome / IE / Firefox / Android / iOS",
+    "skill": "HTML / CSS / JavaScript / Json",
+    "link": "http://lsh58.github.io/tour"
+  }
+]

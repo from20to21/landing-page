@@ -21,7 +21,7 @@ xhr.onload = function () {
             window.location.href = "about.html";
         });//이전페이지로 이동
         $('.next').click(function () {
-            window.location.href = "contact.html";
+            window.location.href = "contact.php";
         });//다음페이지로 이동
         $(window).on('mousewheel', function () {
             slideScroll();

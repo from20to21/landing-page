@@ -1,3 +1,7 @@
+<? 
+    include_once $_SERVER['DOCUMENT_ROOT']."/php/db.php";
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -39,21 +43,21 @@
                     <p>tmdgusdl58@gmail.com</p>
                 </div>
             </div>
-            <form class="main__contact">
+            <form action="contact_ok.php" method="POST" class="main__contact">
                 <div class="main__contact__name">
                     <span class=selected></span>
                     <p>이름</p>
-                    <input type="text" required>
+                    <input type="text" required name="name">
                 </div>
                 <div class="main__contact__mail">
                     <span></span>
                     <p>이메일</p>
-                    <input type="email" required>
+                    <input type="email" required name="email">
                 </div>
                 <div class="main__contact__content">
                     <span></span>
                     <p>내용</p>
-                    <textarea required></textarea>
+                    <textarea required name="contents"></textarea>
                 </div>
                 <input type="submit" class="main__contact__send" value="SEND">
             </form>
@@ -96,7 +100,7 @@
                 이력서다운로드
                 <img src="../img/archive.png" alt="">
             </a>
-            <p>COPYRIGHT 2020 &copy; LEE SEUNG HYUN</p>
+            <p>COPYRIGHT 2020 &copy LEE SEUNG HYUN</p>
         </div>
         <!-- footer end -->
     </div>

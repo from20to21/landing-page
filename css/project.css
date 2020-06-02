@@ -338,7 +338,8 @@ html.search {
     top: 15%;
     left: 80%;
     opacity: 0;
-    transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1); }
+    transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+    white-space: nowrap; }
 
 .contents {
   width: 30%;
@@ -394,13 +395,17 @@ html.search {
     font-weight: bold;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 10%; }
-  .contents a {
+  .contents button {
+    border: none;
+    outline-style: none;
+    cursor: pointer;
+    background: none;
     font-size: 1.2rem;
     position: relative;
     width: max-content;
     display: block;
     color: #d70000; }
-    .contents a:after {
+    .contents button:after {
       content: '';
       display: block;
       position: absolute;

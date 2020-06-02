@@ -1,8 +1,8 @@
 import * as all from './common.js';
 
 var xhr = new XMLHttpRequest();
-xhr.onload = function () {    
-var responseObject = JSON.parse(xhr.responseText);
+xhr.onload = function () {
+    var responseObject = JSON.parse(xhr.responseText);
     $(function () {
         $('.menu').load("menu.html"); // menu html 삽입
         setTimeout(function () {
@@ -13,25 +13,25 @@ var responseObject = JSON.parse(xhr.responseText);
         $('.leftTab__listBtn').click(function () {
             location.href = 'projectList.html';
         });//프로젝트리스트로 이동
-        $('.git').click(function(){
+        $('.git').click(function () {
             var openNewWindow = window.open("about:blank");
-            openNewWindow.location.href="http://github.com/lsh58"
+            openNewWindow.location.href = "http://github.com/lsh58"
         }); //깃허브사이트 새창열기
-        $('.prev').click(function(){
-            window.location.href="about.html";
+        $('.prev').click(function () {
+            window.location.href = "about.html";
         });//이전페이지로 이동
-        $('.next').click(function(){
-            window.location.href="contact.html";
+        $('.next').click(function () {
+            window.location.href = "contact.html";
         });//다음페이지로 이동
-        $(window).on('mousewheel',function(){
+        $(window).on('mousewheel', function () {
             slideScroll();
         });//스크롤로 슬라이드 발동
-        $('.leftTab__text').click(function(){
+        $('.leftTab__text').click(function () {
             $('.leftTab__text').removeClass('selected');
             $(this).addClass('selected');
+            a = $('.leftTab').find($('.selected')).data().num - 1;
             slideScroll();
         });
-
     });
 
     //시작이벤트
@@ -72,15 +72,15 @@ var responseObject = JSON.parse(xhr.responseText);
                 opacity: 1
             });
             $('.scroll').css({
-                opacity:1
-            })
+                opacity: 1
+            });
         }, 3000);
         //컨텐츠 등장 end
     }
     //시작이벤트 end
 
     //사이트 바로가기
-    $('.contents a').click(function () {
+    $('.contents button').click(function () {
         if (a == 1) {
             window.open("http://lsh58.github.io/ZARA", "Popup", "width=500,height=800,resizable=no,menubar=no");
         }
@@ -108,28 +108,28 @@ var responseObject = JSON.parse(xhr.responseText);
 
 
     //스크롤 슬라이드 이벤트
-    var scrollBln =true;
+    var scrollBln = true;
     var num;
 
     function slideScroll() {
-        num=$('.leftTab').find($('.selected')).data().num-1;
-        
-        if(scrollBln==true){
+        console.log(num);
+        if (scrollBln == true) {
             slide();
-            setTimeout(function(){
+            setTimeout(function () {
+                num = $('.leftTab').find($('.selected')).data().num - 1;
                 $('.main__title').html(responseObject[num].title); //한글왜세로로..?
-                $('.contents__sub').html(responseObject[num].sub); 
-                $('.contents__date').html(responseObject[num].date); 
-                $('.contents__text').html(responseObject[num].text); 
-                $('.contents__func').html(responseObject[num].func); 
-                $('.contents__cross').html(responseObject[num].cross); 
-                $('.contents__skill').html(responseObject[num].skill); 
-                $('.contents__link').html(responseObject[num].link); 
-            },1000);
-            scrollBln=false;
-            setTimeout(function(){
-                scrollBln=true;
-            },2000);
+                $('.contents__sub').html(responseObject[num].sub);
+                $('.contents__date').html(responseObject[num].date);
+                $('.contents__text').html(responseObject[num].text);
+                $('.contents__func').html(responseObject[num].func);
+                $('.contents__cross').html(responseObject[num].cross);
+                $('.contents__skill').html(responseObject[num].skill);
+                $('.contents__link').html(responseObject[num].link);
+            }, 1000);
+            scrollBln = false;
+            setTimeout(function () {
+                scrollBln = true;
+            }, 2000);
         }
     }
     //스크롤 슬라이드 이벤트 end
@@ -164,7 +164,7 @@ var responseObject = JSON.parse(xhr.responseText);
             contentsHide();
             $('.leftTab').find('.text0' + a).removeClass('selected');
             $('.main').find('.img0' + a).removeClass('selected');
-            a = 1
+            a = 1;
             $('.main').find('.img0' + a).removeClass('selected');
             setTimeout(function () {
                 $('.main__wrapper').css({

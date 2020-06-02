@@ -121,6 +121,7 @@
         top: 15%; left: 80%;
         opacity: 0;
         transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+        white-space: nowrap;
     }
 }
 .contents{
@@ -182,7 +183,8 @@
         color: rgba(255,255,255,0.9);
         margin-bottom: 10%;
     }
-    & a{
+    & button{
+        @include button_reset;
         font-size: 1.2rem;
         position: relative;
         width: max-content;

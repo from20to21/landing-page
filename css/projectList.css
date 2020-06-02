@@ -240,6 +240,18 @@ html.search {
     transform: translateY(-30%);
     opacity: 0;
     transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1); }
+    .filter__search .close {
+      border: none;
+      outline-style: none;
+      cursor: pointer;
+      background: none;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 3%;
+      right: 13%; }
+      .filter__search .close img {
+        width: 15px; }
     .filter__search input {
       border: 1px solid rgba(255, 255, 255, 0.9);
       background: none;
@@ -255,7 +267,7 @@ html.search {
       color: rgba(255, 255, 255, 0.9); }
       .filter__search input::placeholder {
         color: rgba(255, 255, 255, 0.7); }
-    .filter__search button {
+    .filter__search .search {
       border: none;
       outline-style: none;
       cursor: pointer;
@@ -265,7 +277,7 @@ html.search {
       position: absolute;
       top: 6%;
       right: 13%; }
-      .filter__search button img {
+      .filter__search .search img {
         width: 15px; }
   .filter__title {
     font-size: 1.2rem;

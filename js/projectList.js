@@ -6,12 +6,12 @@ $(function () {
         all.startCommon(); //공통시작이벤트 발동
         start();//시작이벤트 발동
         $('.menu__button').click(all.menuToggle); //메뉴 열기&닫기
-        $('.git').click(function(){
+        $('.git').click(function () {
             var openNewWindow = window.open("about:blank");
-            openNewWindow.location.href="http://github.com/lsh58"
+            openNewWindow.location.href = "http://github.com/lsh58"
         }); //깃허브사이트 새창열기
     }, 500);
-    $('.filter__category li').find('button').click(function(){
+    $('.filter__category li').find('button').click(function () {
         $('.filter__category li').find('button').removeClass('checked');
         $(this).toggleClass('checked');
     });

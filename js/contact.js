@@ -7,13 +7,13 @@ $(function () {
         start();//시작이벤트 발동
         $('.menu__button').click(all.menuToggle); //메뉴 열기&닫기
     }, 500);
-    $('.main__contact__name').find('.selected').focus();//이름란에 포커스 자동으로가도록 설정
-    $('.git').click(function(){
+    $('.main__contact__name').find('input').focus();//이름란에 포커스 자동으로가도록 설정
+    $('.git').click(function () {
         var openNewWindow = window.open("about:blank");
-        openNewWindow.location.href="http://github.com/lsh58"
+        openNewWindow.location.href = "http://github.com/lsh58"
     }); //깃허브사이트 새창열기
-    $('.prev').click(function(){
-        window.location.href="project.html";
+    $('.prev').click(function () {
+        window.location.href = "project.html";
     });
 });
 

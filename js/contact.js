@@ -16,6 +16,8 @@ $(function () {
         window.location.href = "project.html";
     });
 });
+var bgRight = 100 - parseInt($('.background').find('.area').css('width')) / parseInt($('body').css('width')) * 100;
+var mainLeft = $('.main').css('left');
 
 //시작이벤트
 function start() {
@@ -23,7 +25,7 @@ function start() {
     setTimeout(function () {
         $('.background').find('.area01').css({
             transition: '1s',
-            width: '87.5%'
+            width: bgRight + '%'
         });
     }, 600);
     //background 등장 end
@@ -36,7 +38,7 @@ function start() {
     }, 1300);
     setTimeout(function () {
         $('.main').css({
-            left: '25%',
+            left: mainLeft,
             opacity: 1
         });
     }, 2000);

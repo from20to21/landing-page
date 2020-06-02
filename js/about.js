@@ -14,18 +14,20 @@ $(function () {
     skillEnter('.softImg', '.soft');
     skillLeave('.hardImg', '.hard');
     skillLeave('.softImg', '.soft');
-    $('.prev').click(function(){
-        window.location.href="../index.html";
+    $('.prev').click(function () {
+        window.location.href = "../index.html";
     });
-    $('.next').click(function(){
-        window.location.href="project.html";
+    $('.next').click(function () {
+        window.location.href = "project.html";
     });
-    $('.git').click(function(){
+    $('.git').click(function () {
         var openNewWindow = window.open("about:blank");
-        openNewWindow.location.href="http://github.com/lsh58"
+        openNewWindow.location.href = "http://github.com/lsh58"
     }); //깃허브사이트 새창열기
 });
 
+var bgRight = 100 - parseInt($('.background').find('.area').css('width')) / parseInt($('body').css('width')) * 100;
+console.log(bgRight);
 function start() {
     setTimeout(function () {
         $('.pic__left').css({
@@ -40,7 +42,7 @@ function start() {
     setTimeout(function () {
         $('.background').find('.area01').css({
             transition: '1s',
-            width: '87.5%'
+            width: bgRight + '%'
         });
     }, 600);
     setTimeout(function () {
@@ -194,3 +196,5 @@ function skillLeave(img, text) {
         })
     });
 }
+
+

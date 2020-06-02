@@ -5,9 +5,9 @@ $(function () {
         all.startCommon(); //공통시작이벤트 발동
         start();//시작이벤트 발동
         $('.menu__button').click(all.menuToggle); //메뉴 열기&닫기
-        $('.git').click(function(){
+        $('.git').click(function () {
             var openNewWindow = window.open("about:blank");
-            openNewWindow.location.href="http://github.com/lsh58"
+            openNewWindow.location.href = "http://github.com/lsh58"
         }); //깃허브사이트 새창열기
     }, 100)
 });
@@ -24,7 +24,7 @@ function start() {
     //title 등장
     setTimeout(function () {
         $('.title').css({
-            opacity:1,
+            opacity: 1,
             left: '15%'
         })
     }, 1300);
@@ -125,9 +125,6 @@ function g3() {
     }
 }
 //원그리기 end
-
-
-
 
 
 // //메뉴클릭용

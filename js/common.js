@@ -1,5 +1,7 @@
 
 //메뉴 열기&닫기
+var menuBtnRight = parseInt($('.background').find('.area').css('width')) / parseInt($('body').css('width')) * 50;
+
 var bln = true;
 function menuToggle() {
     if ($('.menu__button').hasClass('open') && bln == false) {
@@ -37,6 +39,11 @@ function menuToggle() {
                 top: '4.8%'
             });
         }, 500);
+        setTimeout(function () {
+            $('.title').css({
+                opacity: 1
+            });
+        }, 1000);
         //title 등장 end
 
         //menu title 퇴장
@@ -112,6 +119,9 @@ function menuToggle() {
             $('.menu').find('h3').css({
                 top: '5%'
             });
+            $('.title').css({
+                opacity: 0
+            });
         }, 500);
         //menu title 등장 end
 
@@ -127,8 +137,8 @@ function menuToggle() {
 function startCommon() {
     setTimeout(function () {
         $('.menu').find('button').css({
-            opacity:1,
-            right: '6.25%'
+            opacity: 1,
+            right: menuBtnRight + '%'
         });
         $('.background').find('h3').css({
             top: '5%'

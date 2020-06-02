@@ -43,6 +43,9 @@ function menuToggle() {
             $('.title').css({
                 opacity: 1
             });
+            $('.scroll').css({
+                opacity: 1
+            });
         }, 1000);
         //title 등장 end
 
@@ -74,7 +77,9 @@ function menuToggle() {
         $('.menu__button').css({
             zIndex: 100
         });
-
+        $('.scroll').css({
+            opacity: 0
+        });
         //background 등장
         $('.menu__background').css({
             zIndex: 70

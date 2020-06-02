@@ -261,7 +261,7 @@ html.search{
   }
   &__button{
       position: absolute;
-      z-index: 5;
+      z-index: 100;
       right: 25%; top: 10%;
       transform: translate(50%, -50%);
       opacity: 0;

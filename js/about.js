@@ -27,7 +27,7 @@ $(function () {
 });
 
 var bgRight = 100 - parseInt($('.background').find('.area').css('width')) / parseInt($('body').css('width')) * 100;
-console.log(bgRight);
+
 function start() {
     setTimeout(function () {
         $('.pic__left').css({

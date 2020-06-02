@@ -33,6 +33,7 @@ xhr.onload = function () {
             slideScroll();
         });
     });
+    var bgRight = 100 - parseInt($('.background').find('.area').css('width')) / parseInt($('body').css('width')) * 100;
 
     //시작이벤트
     function start() {
@@ -40,7 +41,7 @@ xhr.onload = function () {
         setTimeout(function () {
             $('.background').find('.area01').css({
                 transition: '1s',
-                width: '87.5%'
+                width: bgRight + '%'
             });
         }, 600);
         //background 등장 end

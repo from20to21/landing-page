@@ -412,8 +412,11 @@
                 z-index: 34-(4 * $i);
             }
         }
+        &:nth-of-type(1){
+            left:0;
+        }
         &:nth-of-type(8){
-            left: 75%;
+            left: 87.5%;
             display: block;
         }
         &__wrapper{

@@ -232,7 +232,7 @@ html.search {
     transition: 1s cubic-bezier(0.22, 1, 0.36, 1); }
   .menu__button {
     position: absolute;
-    z-index: 5;
+    z-index: 100;
     right: 25%;
     top: 10%;
     transform: translate(50%, -50%);
@@ -736,8 +736,10 @@ html.search {
     .background .area:nth-of-type(8) {
       left: 87.5%;
       z-index: 2; }
+    .background .area:nth-of-type(1) {
+      left: 0; }
     .background .area:nth-of-type(8) {
-      left: 75%;
+      left: 87.5%;
       display: block; }
     .background .area__wrapper {
       width: 100%;

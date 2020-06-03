@@ -26,11 +26,18 @@ xhr.onload = function () {
         $(window).on('mousewheel', function () {
             slideScroll();
         });//스크롤로 슬라이드 발동
+        var clickBln = true;
         $('.leftTab__text').click(function () {
-            $('.leftTab__text').removeClass('selected');
-            $(this).addClass('selected');
-            a = $('.leftTab').find($('.selected')).data().num - 1;
-            slideScroll();
+            if (clickBln == true) {
+                clickBln = false;
+                $('.leftTab__text').removeClass('selected');
+                $(this).addClass('selected');
+                a = $('.leftTab').find($('.selected')).data().num - 1;
+                slideScroll();
+            }
+            setTimeout(function () {
+                clickBln = true;
+            }, 2000);
         });
     });
     var bgRight = 100 - parseInt($('.background').find('.area').css('width')) / parseInt($('body').css('width')) * 100;
@@ -113,7 +120,6 @@ xhr.onload = function () {
     var num;
 
     function slideScroll() {
-        console.log(num);
         if (scrollBln == true) {
             slide();
             setTimeout(function () {
@@ -142,8 +148,8 @@ xhr.onload = function () {
     function slide() {
         if (a < 3) {
             contentsHide();
-            $('.leftTab').find('.text0' + a).removeClass('selected');
-            $('.main').find('.img0' + a).removeClass('selected');
+            $('.leftTab__text').removeClass('selected');
+            $('.main__img').removeClass('selected');
             a++;
             setTimeout(function () {
                 $('.main__wrapper').css({
@@ -163,10 +169,9 @@ xhr.onload = function () {
         }
         else {
             contentsHide();
-            $('.leftTab').find('.text0' + a).removeClass('selected');
-            $('.main').find('.img0' + a).removeClass('selected');
+            $('.leftTab__text').removeClass('selected');
+            $('.main__img').removeClass('selected');
             a = 1;
-            $('.main').find('.img0' + a).removeClass('selected');
             setTimeout(function () {
                 $('.main__wrapper').css({
                     transition: '1s cubic-bezier(0.22, 1, 0.36, 1)',

@@ -26,32 +26,18 @@ xhr.onload = function () {
         $(window).on('mousewheel', function () {
             slideScroll();
         });//스크롤로 슬라이드 발동
-        var clickBln = true;
-        $('.leftTab__text').click(function () {
-            if (clickBln == true) {
-                clickBln = false;
-                $('.leftTab__text').removeClass('selected');
-                $(this).addClass('selected');
-                a = $('.leftTab').find($('.selected')).data().num - 1;
-                slideScroll();
-            }
-            setTimeout(function () {
-                clickBln = true;
-            }, 2000);
-        });
+        $('.leftTab__text').click(btnClick);//좌측단 이름 클릭시 슬라이드 발동
     });
     var bgRight = 100 - parseInt($('.background').find('.area').css('width')) / parseInt($('body').css('width')) * 100;
 
     //시작이벤트
     function start() {
-        //background 등장
         setTimeout(function () {
             $('.background').find('.area01').css({
                 transition: '1s',
                 width: bgRight + '%'
             });
-        }, 600);
-        //background 등장 end
+        }, 600); //background 등장
 
         //컨텐츠 등장
         setTimeout(function () {
@@ -101,17 +87,21 @@ xhr.onload = function () {
     });
     //사이트 바로가기 end
 
-    // //슬라이드 오토
-    // var st;
-    // function slideInterval() {
-    //     st = setInterval(function () {
-    //         slide();
-    //     }, 10000)
-    // }
-    // //슬라이드 오토 end
-
     //버튼클릭 이벤트
+    var clickBln = true;
 
+    function btnClick() {
+        if (clickBln == true) {
+            clickBln = false;
+            $('.leftTab__text').removeClass('selected');
+            $(this).addClass('selected');
+            a = $('.leftTab').find($('.selected')).data().num - 1;
+            slideScroll();
+        }
+        setTimeout(function () {
+            clickBln = true;
+        }, 2000);
+    }
     //버튼클릭 이벤트 end
 
 
@@ -124,7 +114,7 @@ xhr.onload = function () {
             slide();
             setTimeout(function () {
                 num = $('.leftTab').find($('.selected')).data().num - 1;
-                $('.main__title').html(responseObject[num].title); //한글왜세로로..?
+                $('.main__title').html(responseObject[num].title);
                 $('.contents__sub').html(responseObject[num].sub);
                 $('.contents__date').html(responseObject[num].date);
                 $('.contents__text').html(responseObject[num].text);

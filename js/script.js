@@ -14,34 +14,31 @@ $(function () {
 
 
 function start() {
-    //background 등장
     for (var i = 1; i < 9; i++) {
         var BgShow = bgShow(i, "background", " .area__wrapper", 0, '100%', 100);
         BgShow();
-    }
-    //background 등장 end
+    } //background 등장
 
-    //title 등장
     setTimeout(function () {
         $('.title').css({
             opacity: 1,
             left: '15%'
         })
-    }, 1300);
-    //title 등장 end
+    }, 1300); //title 등장
 
-    //footer 등장
     setTimeout(function () {
         $('.footer').css({
             bottom: '40px'
         })
-    }, 1600);
-    //footer 등장 end
-    // setTimeout(function () {
-    //     window.location.href = "sub/about.html";
-    // }, 4000);
+    }, 1600); //footer 등장
+
+    setTimeout(function () {
+        window.location.href = "sub/about.html";
+    }, 4000); //about페이지로 이동
+
 }
 
+//background등장
 function bgShow(i, div, find, trans, wid, num) {
     return function () {
         setTimeout(function () {
@@ -52,6 +49,7 @@ function bgShow(i, div, find, trans, wid, num) {
         }, 500 + i * num);
     }
 }
+//background등장 end
 
 //원그리기
 var canvas1 = document.getElementById('canvas1');
@@ -70,7 +68,6 @@ setTimeout(g3, 2000);
 setTimeout(g2, 2200);
 setTimeout(g1, 2500);
 
-// 
 function g1() {
     ctx1.beginPath();
     gradient1.addColorStop("0", "#d70000");
@@ -89,7 +86,6 @@ function g1() {
     }
 }
 
-// 
 function g2() {
     ctx2.beginPath();
     gradient2.addColorStop("0", "#d70000");
@@ -107,7 +103,6 @@ function g2() {
     }
 }
 
-// 
 function g3() {
     ctx3.beginPath();
     gradient3.addColorStop("0", "#d70000");
@@ -125,15 +120,6 @@ function g3() {
     }
 }
 //원그리기 end
-
-
-// //메뉴클릭용
-// $('canvas').click(function () {
-//     if (e.clientX > 1800) {
-//         alert('menu')
-//     }
-// })
-// //메뉴클릭용
 
 
 //파일다운로드 구현

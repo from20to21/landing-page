@@ -49,13 +49,10 @@ function menuToggle() {
         }, 1000);
         //title 등장 end
 
-        //menu title 퇴장
         $('.menu').find('h3').css({
             top: '-5%'
-        });
-        //menu title 퇴장 end
+        });//menu title 퇴장
 
-        //menu__background 원래위치로 돌려두기
         setTimeout(function () {
             $('.menu__background').find('.area__wrapper').css({
                 transform: 'translateX(0)',
@@ -63,14 +60,11 @@ function menuToggle() {
             $('.menu__background').css({
                 zIndex: -1
             });
-        }, 1400)
-        //menu__background 원래위치로 돌려두기 end
+        }, 1400);//menu__background 원래위치로 돌려두기
 
-        //연속실행 방지
         setTimeout(function () {
             bln = true;
-        }, 2000)
-        //연속실행 방지 end
+        }, 2000)//연속실행 방지
     }
     if (!$('.menu__button').hasClass('open') && bln == true) {
         $('.menu__button').addClass('open');
@@ -174,6 +168,5 @@ function menu(i, left, num, num2) {
         }, num + i * num2);
     }
 }
-
 
 export { menuToggle, startCommon };

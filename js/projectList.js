@@ -14,20 +14,17 @@ $(function () {
     $('.filter__category li').find('button').click(function () {
         $('.filter__category li').find('button').removeClass('checked');
         $(this).toggleClass('checked');
-    });
-    //검색구현해야
+    }); //필터버튼 클릭
 });
 
 //시작이벤트
 function start() {
-    //background 등장
     setTimeout(function () {
         $('.background').find('.area02').css({
             transition: '1s',
             width: '75%'
         });
-    }, 600);
-    //background 등장 end
+    }, 600);//background 등장
 
     //컨텐츠 등장
     setTimeout(function () {
@@ -70,6 +67,7 @@ $('.contents04 button').click(function () {
 });
 //사이트 바로가기 end
 
+//필터 등장
 function filterShow(i, div, num) {
     return function () {
         setTimeout(function () {
@@ -80,3 +78,4 @@ function filterShow(i, div, num) {
         }, i * 200);
     }
 }
+//필터등장 end

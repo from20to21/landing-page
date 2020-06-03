@@ -14,21 +14,22 @@ $(function () {
     }); //깃허브사이트 새창열기
     $('.prev').click(function () {
         window.location.href = "project.html";
-    });
+    }); //이전페이지로 이동
+    inputClick(); //input 클릭 이벤트
 });
+
 var bgRight = 100 - parseInt($('.background').find('.area').css('width')) / parseInt($('body').css('width')) * 100;
 var mainLeft = $('.main').css('left');
 
 //시작이벤트
 function start() {
-    //background 등장
     setTimeout(function () {
         $('.background').find('.area01').css({
             transition: '1s',
             width: bgRight + '%'
         });
-    }, 600);
-    //background 등장 end
+    }, 600);//background 등장 
+
     //컨텐츠 등장
     setTimeout(function () {
         $('.leftTab').css({
@@ -52,6 +53,4 @@ function inputClick() {
         $('.main__contact div').find('span').removeClass('selected');
         $(this).parent().find('span').toggleClass('selected');
     })
-
 }
-inputClick();

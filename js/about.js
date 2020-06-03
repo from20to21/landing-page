@@ -6,20 +6,18 @@ $(function () {
         all.startCommon(); //공통시작이벤트 발동
         start();//시작이벤트 발동
         $('.menu__button').click(all.menuToggle); //메뉴 열기&닫기
-    }, 500)
+    }, 500);
     setInterval(function () {
         askBox();
-    }, 10000);
+    }, 10000); //질문박스 슬라이드
     skillEnter('.hardImg', '.hard');
     skillEnter('.softImg', '.soft');
-    skillLeave('.hardImg', '.hard');
-    skillLeave('.softImg', '.soft');
     $('.prev').click(function () {
         window.location.href = "../index.html";
-    });
+    }); //이전페이지 이동
     $('.next').click(function () {
         window.location.href = "project.html";
-    });
+    }); //다음페이지 이동
     $('.git').click(function () {
         var openNewWindow = window.open("about:blank");
         openNewWindow.location.href = "http://github.com/lsh58"
@@ -114,6 +112,7 @@ function start() {
     }, 2800);
 }
 
+//스킬관련 그래프
 function redDotSlide(i, dv) {
     return function () {
         setTimeout(function () {
@@ -164,7 +163,9 @@ function redLineSlide(i, dv) {
         }, 500 + i * 500);
     }
 }
+//스킬관련 그래프 end
 
+//질문박스 슬라이드
 function askBox() {
     $('.askBox').find('div').eq(1).animate({
         opacity: 1
@@ -181,20 +182,21 @@ function askBox() {
         });
     });
 }
+//질문박스 슬라이드 end
 
+//스킬설명
 function skillEnter(img, text) {
     $(img).mouseenter(function () {
         $(text).css({
             opacity: 1
         })
     });
-}
-function skillLeave(img, text) {
     $(img).mouseleave(function () {
         $(text).css({
             opacity: 0
         })
     });
 }
+//스킬설명 end
 
 

@@ -32,9 +32,9 @@ function start() {
         })
     }, 1600); //footer 등장
 
-    setTimeout(function () {
-        window.location.href = "sub/about.html";
-    }, 4000); //about페이지로 이동
+    // setTimeout(function () {
+    //     window.location.href = "sub/about.html";
+    // }, 4000); //about페이지로 이동
 
 }
 

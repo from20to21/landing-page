@@ -199,13 +199,6 @@
                 z-index: 34-(4 * $i);
             }
         }
-        &:nth-of-type(1){
-            left:0;
-        }
-        &:nth-of-type(8){
-            left: 87.5%;
-            display: block;
-        }
         &__wrapper{
             width: 100%;
             height: 100%;
@@ -216,25 +209,32 @@
     }
     & h3{
         position: absolute;
-        top: -5%; right: 6.25%;
+        top: 5.1%; right: 6.25%;
         transform: translateX(50%);
         z-index: 100;
         font-weight: bold;
         font-size: 1.2rem;
+        opacity: 0;
         color: rgba(255,255,255,0.9);
         transition:1s cubic-bezier(0.22, 1, 0.36, 1); 
     }
     & button{
         @include button_reset;
         position: absolute;
-        top: -5%; right: 9.8%;
+        top: 5%; right: 9.8%;
         transform: translateX(50%);
         z-index: 100;
         width: 25px;
         height:25px;
-        @include bg_center('/img/next.png');
+        @include bg_center('../img/next.png');
         transform: rotate(180deg);
         transition:1s cubic-bezier(0.22, 1, 0.36, 1); 
+        opacity: 0;
+        &:nth-of-type(2){
+            top: 5%;   
+            right: 1.5%;
+            transform: rotate(0);
+        }
     }
 }
 
@@ -265,15 +265,15 @@
     }
     
     .main{
-        @include size(75%);
+        @include size(87.5%);
         position: absolute;
         z-index: 50;
-        left: 0%;
+        left: 4%;
         opacity: 0;
         transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1);
         &__title{
             width: 57%;
-            margin: 40% 0 0 5%;
+            margin: 20% 0 0 5%;
             display: flex;
             align-items: flex-end;
             & h3{
@@ -427,23 +427,16 @@
         position: relative;
         display: flex;
         & .area{
-            @include size(25%);
+            @include size(12.5%);
             transition: .1s;
             position: absolute;
             left: 0;top:0;
             overflow: hidden;
             @for $i from 1 to 9{ 
                 &:nth-of-type(#{$i}){     
-                    left: 25 * ($i - 3) * 1%;
+                    left: 12.5 * ($i - 1) * 1%;
                     z-index: 34-(4 * $i);
                 }
-            }
-            &:nth-of-type(1){
-                left:0;
-            }
-            &:nth-of-type(8){
-                left: 75%;
-                display: block;
             }
             &__wrapper{
                 width: 100%;
@@ -455,25 +448,31 @@
         }
         & h3{
             position: absolute;
-            top: -5%; right: 12.5%;
-            transform: translateX(50%);
+            top: 50%; right: 6.25%;
+            transform: translate(50%, -50%) rotate(-90deg);
             z-index: 100;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 2rem;
+            opacity: 0;
             color: rgba(255,255,255,0.9);
             transition:1s cubic-bezier(0.22, 1, 0.36, 1); 
         }
         & button{
             @include button_reset;
             position: absolute;
-            top: -5%; right: 19%;
-            transform: translateX(50%);
+            top: 60%; right: 4.25%;
+            transform: translate(-50%, -50%);
             z-index: 100;
             width: 25px;
             height:25px;
-            @include bg_center('/img/next.png');
+            @include bg_center('../img/next.png');
             transform: rotate(180deg);
             transition:1s cubic-bezier(0.22, 1, 0.36, 1); 
+            &:nth-of-type(2){
+                top:40%;
+                right: 4.25%;
+                transform: rotate(0);
+            }
         }
     }
     

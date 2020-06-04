@@ -441,7 +441,7 @@
         z-index: 100;
         width: 25px;
         height:25px;
-        @include bg_center('/img/next.png');
+        @include bg_center('../img/next.png');
         transform: rotate(180deg);
         transition:1s cubic-bezier(0.22, 1, 0.36, 1); 
         &:nth-of-type(2){
@@ -898,7 +898,7 @@
             z-index: 100;
             width: 25px;
             height:25px;
-            @include bg_center('/img/next.png');
+            @include bg_center('../img/next.png');
             transform: rotate(180deg);
             transition:1s cubic-bezier(0.22, 1, 0.36, 1); 
             &:nth-of-type(2){

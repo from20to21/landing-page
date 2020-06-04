@@ -340,7 +340,7 @@ html.search {
     bottom: 40px;
     right: 0;
     z-index: 100;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -521,9 +521,6 @@ canvas {
       .background .area:nth-of-type(8) {
         left: 87.5%;
         z-index: 2; }
-      .background .area:nth-of-type(8) {
-        left: 75%;
-        display: block; }
       .background .area__wrapper {
         width: 0;
         height: 100%;

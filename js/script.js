@@ -22,7 +22,7 @@ function start() {
     setTimeout(function () {
         $('.title').css({
             opacity: 1,
-            left: '15%'
+            left: '5%'
         })
     }, 1300); //title 등장
 

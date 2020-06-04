@@ -113,10 +113,6 @@ canvas{
                     z-index: 34-(4 * $i);
                 }
             }
-            &:nth-of-type(8){
-                left: 75%;
-                display: block;
-            }
             &__wrapper{
                 width: 0;
                 height: 100%;

@@ -3,34 +3,45 @@ import * as all from './common.js';
 var xhr = new XMLHttpRequest();
 xhr.onload = function () {
     var responseObject = JSON.parse(xhr.responseText);
-    $(function () {
-        $('.menu').load("menu.html"); // menu html 삽입
-        setTimeout(function () {
-            all.startCommon(); //공통시작이벤트 발동
-            start();//시작이벤트 발동
-            $('.menu__button').click(all.menuToggle); //메뉴 열기&닫기
-        }, 500);
-        $('.leftTab__listBtn').click(function () {
-            location.href = 'projectList.html';
-        });//프로젝트리스트로 이동
-        $('.git').click(function () {
-            var openNewWindow = window.open("about:blank");
-            openNewWindow.location.href = "http://github.com/lsh58"
-        }); //깃허브사이트 새창열기
-        $('.prev').click(function () {
-            window.location.href = "about.html";
-        });//이전페이지로 이동
-        $('.next').click(function () {
-            window.location.href = "contact.php";
-        });//다음페이지로 이동
-        $(window).on('mousewheel', function () {
-            slideScroll();
-        });//스크롤로 슬라이드 발동
-        $(window).on('touchend', function () {
-            slideScroll();
-        });
-        $('.leftTab__text').click(btnClick);//좌측단 이름 클릭시 슬라이드 발동
+    $('.menu').load("menu.html"); // menu html 삽입
+    setTimeout(function () {
+        all.startCommon(); //공통시작이벤트 발동
+        start();//시작이벤트 발동
+        $('.menu__button').click(all.menuToggle); //메뉴 열기&닫기
+    }, 500);
+    $('.leftTab__listBtn').click(function () {
+        location.href = 'projectList.html';
+    });//프로젝트리스트로 이동
+    $('.git').click(function () {
+        var openNewWindow = window.open("about:blank");
+        openNewWindow.location.href = "http://github.com/lsh58"
+    }); //깃허브사이트 새창열기
+    $('.prev').click(function () {
+        window.location.href = "about.html";
+    });//이전페이지로 이동
+    $('.next').click(function () {
+        window.location.href = "contact.php";
+    });//다음페이지로 이동
+    $(window).on('mousewheel', function () {
+        slideScroll();
+    });//스크롤로 슬라이드 발동
+    $(window).on('touchend', function () {
+        slideScroll();
     });
+    $('.leftTab__text').click(btnClick);//좌측단 이름 클릭시 슬라이드 발동
+    //사이트 바로가기
+    $('.contents button').click(function () {
+        if (a == 1) {
+            window.open("http://lsh58.github.io/ZARA", "Popup", "width=500,height=800,resizable=no,menubar=no");
+        }
+        if (a == 2) {
+            window.open("http://tmdgus508.dothome.co.kr/", "Popup", "");
+        }
+        if (a == 3) {
+            window.open("http://lsh58.github.io/tour", "Popup", "");
+        }
+    });
+    //사이트 바로가기 end
     var bgRight = 100 - parseInt($('.background').find('.area').css('width')) / parseInt($('body').css('width')) * 100;
 
     //시작이벤트
@@ -78,20 +89,6 @@ xhr.onload = function () {
         //컨텐츠 등장 end
     }
     //시작이벤트 end
-
-    //사이트 바로가기
-    $('.contents button').click(function () {
-        if (a == 1) {
-            window.open("http://lsh58.github.io/ZARA", "Popup", "width=500,height=800,resizable=no,menubar=no");
-        }
-        if (a == 2) {
-            window.open("http://tmdgus508.dothome.co.kr/", "Popup", "");
-        }
-        if (a == 3) {
-            window.open("http://lsh58.github.io/tour", "Popup", "");
-        }
-    });
-    //사이트 바로가기 end
 
     //버튼클릭 이벤트
     var clickBln = true;

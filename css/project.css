@@ -681,7 +681,7 @@ html.search {
     z-index: 100;
     width: 25px;
     height: 25px;
-    background: url("/img/next.png") no-repeat center/cover;
+    background: url("../img/next.png") no-repeat center/cover;
     transform: rotate(180deg);
     transition: 1s cubic-bezier(0.22, 1, 0.36, 1); }
     .background button:nth-of-type(2) {
@@ -1006,7 +1006,7 @@ html.search {
       z-index: 100;
       width: 25px;
       height: 25px;
-      background: url("/img/next.png") no-repeat center/cover;
+      background: url("../img/next.png") no-repeat center/cover;
       transform: rotate(180deg);
       transition: 1s cubic-bezier(0.22, 1, 0.36, 1); }
       .background button:nth-of-type(2) {

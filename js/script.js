@@ -12,6 +12,7 @@ $(function () {
     }, 100)
 });
 
+var titleLeft = parseInt($('.title').css('left')) * -1;
 
 function start() {
     for (var i = 1; i < 9; i++) {
@@ -22,7 +23,7 @@ function start() {
     setTimeout(function () {
         $('.title').css({
             opacity: 1,
-            left: '5%'
+            left: titleLeft
         })
     }, 1300); //title 등장
 
@@ -32,10 +33,9 @@ function start() {
         })
     }, 1600); //footer 등장
 
-    // setTimeout(function () {
-    //     window.location.href = "sub/about.html";
-    // }, 4000); //about페이지로 이동
-
+    setTimeout(function () {
+        window.location.href = "sub/about.html";
+    }, 4000); //about페이지로 이동
 }
 
 //background등장

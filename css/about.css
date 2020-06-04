@@ -524,7 +524,7 @@ html.search {
       flex-direction: column;
       position: absolute;
       z-index: 2;
-      top: 27%;
+      top: 29%;
       right: 33%; }
       .about__spec__explain p {
         color: rgba(255, 255, 255, 0.9);
@@ -563,7 +563,8 @@ html.search {
         opacity: 0;
         transition: .5s;
         transform: translateX(30%);
-        font-weight: 100; }
+        font-weight: 100;
+        font-size: 0.9rem; }
       .about__spec__hardSkils .line {
         display: block;
         width: 0;
@@ -601,7 +602,8 @@ html.search {
         opacity: 0;
         transition: .5s;
         transform: translateX(30%);
-        font-weight: 100; }
+        font-weight: 100;
+        font-size: 0.9rem; }
       .about__spec__softSkils .line {
         display: block;
         width: 0;
@@ -736,11 +738,6 @@ html.search {
     .background .area:nth-of-type(8) {
       left: 87.5%;
       z-index: 2; }
-    .background .area:nth-of-type(1) {
-      left: 0; }
-    .background .area:nth-of-type(8) {
-      left: 87.5%;
-      display: block; }
     .background .area__wrapper {
       width: 100%;
       height: 100%;
@@ -755,6 +752,7 @@ html.search {
     z-index: 100;
     font-weight: bold;
     font-size: 1.2rem;
+    opacity: 0;
     color: rgba(255, 255, 255, 0.9);
     transition: 1s cubic-bezier(0.22, 1, 0.36, 1); }
   .background button {
@@ -773,6 +771,7 @@ html.search {
     transform: rotate(180deg);
     transition: 1s cubic-bezier(0.22, 1, 0.36, 1); }
     .background button:nth-of-type(2) {
+      top: -5%;
       right: 1.5%;
       transform: rotate(0); }
 
@@ -865,8 +864,8 @@ html.search {
   .about {
     position: absolute;
     top: 0;
-    right: 20%;
-    width: 75%;
+    right: 8%;
+    width: 87.5%;
     height: 100vh;
     z-index: 40;
     display: flex;
@@ -885,7 +884,7 @@ html.search {
         transition: 1s cubic-bezier(0.22, 1, 0.36, 1); }
       .about__title h3 {
         color: rgba(255, 255, 255, 0.9);
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: bold;
         position: absolute;
         top: 10%;
@@ -978,7 +977,8 @@ html.search {
           opacity: 0;
           transition: .5s;
           transform: translateX(30%);
-          font-weight: 100; }
+          font-weight: 100;
+          font-size: 0.8rem; }
         .about__spec__hardSkils .line {
           display: block;
           width: 0;
@@ -1016,7 +1016,8 @@ html.search {
           opacity: 0;
           transition: .5s;
           transform: translateX(30%);
-          font-weight: 100; }
+          font-weight: 100;
+          font-size: 0.8rem; }
         .about__spec__softSkils .line {
           display: block;
           width: 0;
@@ -1035,7 +1036,7 @@ html.search {
         display: flex; }
         .about__spec__edu p {
           color: rgba(255, 255, 255, 0.8);
-          font-size: 0.8rem;
+          font-size: 0.7rem;
           font-weight: 100;
           line-height: 1rem;
           margin-right: 40px;
@@ -1047,7 +1048,7 @@ html.search {
         display: flex; }
         .about__spec__career p {
           color: rgba(255, 255, 255, 0.8);
-          font-size: 0.8rem;
+          font-size: 0.7rem;
           font-weight: 100;
           line-height: 1.2rem;
           margin-right: 40px;
@@ -1059,7 +1060,7 @@ html.search {
         display: flex; }
         .about__spec__qualification p {
           color: rgba(255, 255, 255, 0.8);
-          font-size: 0.8rem;
+          font-size: 0.7rem;
           font-weight: 100;
           line-height: 1.2rem;
           margin-right: 40px;
@@ -1081,8 +1082,8 @@ html.search {
   .askBox {
     position: absolute;
     bottom: -250px;
-    right: 30%;
-    width: 60%;
+    right: 20%;
+    width: 70%;
     z-index: 40;
     opacity: 0;
     display: flex;
@@ -1112,7 +1113,8 @@ html.search {
       color: rgba(255, 255, 255, 0.8);
       text-align: right;
       font-weight: 100;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      word-break: keep-all; }
 
   .background {
     width: 100%;
@@ -1120,7 +1122,7 @@ html.search {
     position: relative;
     display: flex; }
     .background .area {
-      width: 25%;
+      width: 12.5%;
       height: 100vh;
       transition: .1s;
       position: absolute;
@@ -1128,34 +1130,29 @@ html.search {
       top: 0;
       overflow: hidden; }
       .background .area:nth-of-type(1) {
-        left: -50%;
+        left: 0%;
         z-index: 30; }
       .background .area:nth-of-type(2) {
-        left: -25%;
+        left: 12.5%;
         z-index: 26; }
       .background .area:nth-of-type(3) {
-        left: 0%;
+        left: 25%;
         z-index: 22; }
       .background .area:nth-of-type(4) {
-        left: 25%;
+        left: 37.5%;
         z-index: 18; }
       .background .area:nth-of-type(5) {
         left: 50%;
         z-index: 14; }
       .background .area:nth-of-type(6) {
-        left: 75%;
+        left: 62.5%;
         z-index: 10; }
       .background .area:nth-of-type(7) {
-        left: 100%;
+        left: 75%;
         z-index: 6; }
       .background .area:nth-of-type(8) {
-        left: 125%;
+        left: 87.5%;
         z-index: 2; }
-      .background .area:nth-of-type(1) {
-        left: 0; }
-      .background .area:nth-of-type(8) {
-        left: 75%;
-        display: block; }
       .background .area__wrapper {
         width: 100%;
         height: 100%;
@@ -1164,12 +1161,13 @@ html.search {
         transition: 0.3s; }
     .background h3 {
       position: absolute;
-      top: -5%;
-      right: 12.5%;
-      transform: translateX(50%);
+      top: 50%;
+      right: 6.25%;
+      transform: translate(50%, -50%) rotate(-90deg);
       z-index: 100;
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 2rem;
+      opacity: 0;
       color: rgba(255, 255, 255, 0.9);
       transition: 1s cubic-bezier(0.22, 1, 0.36, 1); }
     .background button {
@@ -1178,9 +1176,9 @@ html.search {
       cursor: pointer;
       background: none;
       position: absolute;
-      top: -5%;
-      right: 19%;
-      transform: translateX(50%);
+      top: 60%;
+      right: 4.25%;
+      transform: translate(-50%, -50%);
       z-index: 100;
       width: 25px;
       height: 25px;
@@ -1188,7 +1186,8 @@ html.search {
       transform: rotate(180deg);
       transition: 1s cubic-bezier(0.22, 1, 0.36, 1); }
       .background button:nth-of-type(2) {
-        right: 3%;
+        top: 40%;
+        right: 4.25%;
         transform: rotate(0); } }
 
 /*# sourceMappingURL=about.css.map */

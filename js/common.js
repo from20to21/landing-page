@@ -132,7 +132,6 @@ function menuToggle() {
     }
 }
 //메뉴 열기&닫기 end
-
 function startCommon() {
     setTimeout(function () {
         $('.menu').find('button').css({
@@ -140,10 +139,10 @@ function startCommon() {
             right: menuBtnRight + '%'
         });
         $('.background').find('h3').css({
-            top: '5%'
+            opacity: 1
         });
         $('.background').find('button').css({
-            top: '4.8%'
+            opacity: 1
         });
     }, 1300);
 }

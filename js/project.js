@@ -25,9 +25,6 @@ xhr.onload = function () {
     $(window).on('mousewheel', function () {
         slideScroll();
     });//스크롤로 슬라이드 발동
-    $(window).on('touchend', function () {
-        slideScroll();
-    });
     $('.leftTab__text').click(btnClick);//좌측단 이름 클릭시 슬라이드 발동
     //사이트 바로가기
     $('.contents button').click(function () {

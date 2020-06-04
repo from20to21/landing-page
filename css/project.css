@@ -572,7 +572,23 @@ html.search {
   width: 30%;
   height: 100vh; }
 
+.tabletBtn {
+  border: none;
+  outline-style: none;
+  cursor: pointer;
+  background: none;
+  position: absolute;
+  bottom: 4.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: url("../img/down.png") no-repeat center/cover;
+  z-index: 100;
+  display: none; }
+
 .scroll {
+  display: block;
   position: absolute;
   z-index: 100;
   bottom: 4.5%;
@@ -892,7 +908,23 @@ html.search {
     width: 30%;
     height: 100vh; }
 
+  .tabletBtn {
+    border: none;
+    outline-style: none;
+    cursor: pointer;
+    background: none;
+    position: absolute;
+    bottom: 4.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: url("../img/down.png") no-repeat center/cover;
+    z-index: 100;
+    display: block; }
+
   .scroll {
+    display: none;
     position: absolute;
     z-index: 100;
     bottom: 4.5%;

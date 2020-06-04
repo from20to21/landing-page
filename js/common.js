@@ -136,7 +136,7 @@ function menuToggle() {
 //메뉴 열기&닫기 end
 function startCommon() {
     setTimeout(function () {
-        $('.menu').find('button').css({
+        $('.menu__button').css({
             opacity: 1,
             right: menuBtnRight + '%'
         });

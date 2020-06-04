@@ -121,7 +121,6 @@ html.search{
       right: 25%; top: 50%;
       transform: translate(50%, -50%);
       opacity: 0;
-      @include button_reset();
       width: 30px;
       height: 30px;
       display: flex;

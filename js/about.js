@@ -5,7 +5,10 @@ $(function () {
     setTimeout(function () {
         all.startCommon(); //공통시작이벤트 발동
         start();//시작이벤트 발동
-        $('.menu__button').click(all.menuToggle); //메뉴 열기&닫기
+        $('.menu__button').click(function (e) {
+            e.preventDefault();
+            all.menuToggle();
+        }); //메뉴 열기&닫기
     }, 500);
     setInterval(function () {
         askBox();

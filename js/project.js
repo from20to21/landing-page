@@ -26,12 +26,19 @@ xhr.onload = function () {
         $(window).on('mousewheel', function () {
             slideScroll();
         });//스크롤로 슬라이드 발동
+        $(window).on('touchend', function () {
+            slideScroll();
+        });
         $('.leftTab__text').click(btnClick);//좌측단 이름 클릭시 슬라이드 발동
     });
     var bgRight = 100 - parseInt($('.background').find('.area').css('width')) / parseInt($('body').css('width')) * 100;
 
     //시작이벤트
     function start() {
+
+        if (parseInt($('.contents').css('zIndex')) == 70) {
+            $('.main').addClass('tablet');
+        }
         setTimeout(function () {
             $('.background').find('.area01').css({
                 transition: '1s',
@@ -53,18 +60,17 @@ xhr.onload = function () {
             });
         }, 2000);
         setTimeout(function () {
-            $('.main__title').css({
-                left: '87%',
-                opacity: 1
-            });
+            if ($('.main').hasClass('tablet')) {
+                contentsShowTablet();
+            }
+            else {
+                contentsShowPc();
+            }
+
             numChange('leftTab__number', ' .change', '', 1);
             numChange('backNum', '', '0', 1);
         }, 2500);
         setTimeout(function () {
-            $('.contents').css({
-                left: '45%',
-                opacity: 1
-            });
             $('.scroll').css({
                 opacity: 1
             });
@@ -111,7 +117,12 @@ xhr.onload = function () {
 
     function slideScroll() {
         if (scrollBln == true) {
-            slide();
+            if ($('.main').hasClass('tablet')) {
+                slideTablet();
+            }
+            else {
+                slidePc();
+            }
             setTimeout(function () {
                 num = $('.leftTab').find($('.selected')).data().num - 1;
                 $('.main__title').html(responseObject[num].title);
@@ -135,9 +146,9 @@ xhr.onload = function () {
     //슬라이드이벤트
     var a = parseInt($('.leftTab__number').find('.change').text());
 
-    function slide() {
+    function slidePc() {
         if (a < 3) {
-            contentsHide();
+            contentsHidePc();
             $('.leftTab__text').removeClass('selected');
             $('.main__img').removeClass('selected');
             a++;
@@ -148,7 +159,7 @@ xhr.onload = function () {
                 });
             }, 500);
             setTimeout(function () {
-                contentsShow();
+                contentsShowPc();
                 $('.main').find('.img0' + a).addClass('selected')
             }, 1300);
             $('.leftTab').find('.text0' + a).addClass('selected');
@@ -158,7 +169,7 @@ xhr.onload = function () {
             numChange('backNum', '', '0', a);
         }
         else {
-            contentsHide();
+            contentsHidePc();
             $('.leftTab__text').removeClass('selected');
             $('.main__img').removeClass('selected');
             a = 1;
@@ -175,7 +186,58 @@ xhr.onload = function () {
                 });
             }, 1300);
             setTimeout(function () {
-                contentsShow();
+                contentsShowPc();
+                $('.main').find('.img0' + a).addClass('selected');
+            }, 1300);
+            $('.leftTab').find('.text0' + a).addClass('selected');
+            setTimeout(function () {
+                $('.leftTab__number .change').text(a);
+            }, 500);
+            numChange('backNum', '', '0', a);
+        }
+    }
+
+    function slideTablet() {
+        if (a < 3) {
+            contentsHideTablet();
+            $('.leftTab__text').removeClass('selected');
+            $('.main__img').removeClass('selected');
+            a++;
+            setTimeout(function () {
+                $('.main__wrapper').css({
+                    transition: '1s cubic-bezier(0.22, 1, 0.36, 1)',
+                    top: (25 - (75 * (a - 1))) + '%'
+                });
+            }, 500);
+            setTimeout(function () {
+                contentsShowTablet();
+                $('.main').find('.img0' + a).addClass('selected')
+            }, 1300);
+            $('.leftTab').find('.text0' + a).addClass('selected');
+            setTimeout(function () {
+                $('.leftTab__number .change').text(a);
+            }, 500);
+            numChange('backNum', '', '0', a);
+        }
+        else {
+            contentsHideTablet();
+            $('.leftTab__text').removeClass('selected');
+            $('.main__img').removeClass('selected');
+            a = 1;
+            setTimeout(function () {
+                $('.main__wrapper').css({
+                    transition: '1s cubic-bezier(0.22, 1, 0.36, 1)',
+                    top: '-200%'
+                });
+            }, 500);
+            setTimeout(function () {
+                $('.main__wrapper').css({
+                    transition: '0s ease-in',
+                    top: '50%'
+                });
+            }, 1300);
+            setTimeout(function () {
+                contentsShowTablet();
                 $('.main').find('.img0' + a).addClass('selected');
             }, 1300);
             $('.leftTab').find('.text0' + a).addClass('selected');
@@ -188,7 +250,7 @@ xhr.onload = function () {
 
 
     //컨텐츠 등장
-    function contentsShow() {
+    function contentsShowPc() {
         $('.main__title').css({
             left: '87%',
             opacity: 1
@@ -198,16 +260,36 @@ xhr.onload = function () {
             opacity: 1
         });
     }
+    function contentsShowTablet() {
+        $('.main__title').css({
+            left: '10%',
+            opacity: 1
+        });
+        $('.contents').css({
+            left: '20%',
+            opacity: 1
+        });
+    }
     //컨텐츠 등장 end
 
     //컨텐츠 숨기기
-    function contentsHide() {
+    function contentsHidePc() {
         $('.main__title').css({
             left: '82%',
             opacity: 0
         });
         $('.contents').css({
             left: '40%',
+            opacity: 0
+        });
+    }
+    function contentsHideTablet() {
+        $('.main__title').css({
+            left: '5%',
+            opacity: 0
+        });
+        $('.contents').css({
+            left: '15%',
             opacity: 0
         });
     }

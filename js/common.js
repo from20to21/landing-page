@@ -33,10 +33,10 @@ function menuToggle() {
         //title 등장
         setTimeout(function () {
             $('.background').find('h3').css({
-                top: '5%'
+                opacity: 1
             });
             $('.background').find('button').css({
-                top: '4.8%'
+                opacity: 1
             });
         }, 500);
         setTimeout(function () {
@@ -106,10 +106,10 @@ function menuToggle() {
 
         //title 퇴장
         $('.background').find('h3').css({
-            top: '-5%'
+            opacity: 0
         });
         $('.background').find('button').css({
-            top: '-5%'
+            opacity: 0
         });
         //title 퇴장 end
 
@@ -131,6 +131,8 @@ function menuToggle() {
         //연속실행 방지 end
     }
 }
+
+
 //메뉴 열기&닫기 end
 function startCommon() {
     setTimeout(function () {

@@ -282,7 +282,7 @@
     }
     & h3{
         position: absolute;
-        top: -5%; right: 6.25%;
+        top: 5.1%; right: 6.25%;
         transform: translateX(50%);
         z-index: 100;
         font-weight: bold;
@@ -293,7 +293,7 @@
     & button{
         @include button_reset;
         position: absolute;
-        top: -5%; right: 9.8%;
+        top: 5%; right: 9.8%;
         transform: translateX(50%);
         z-index: 100;
         width: 25px;

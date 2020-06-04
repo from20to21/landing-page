@@ -424,7 +424,7 @@
     }
     & h3{
         position: absolute;
-        top: -5%; right: 6.25%;
+        top: 5.1%; right: 6.25%;
         transform: translateX(50%);
         z-index: 100;
         font-weight: bold;
@@ -436,7 +436,7 @@
     & button{
         @include button_reset;
         position: absolute;
-        top: -5%; right: 9.8%;
+        top: 5%; right: 9.8%;
         transform: translateX(50%);
         z-index: 100;
         width: 25px;
@@ -444,8 +444,9 @@
         @include bg_center('../img/next.png');
         transform: rotate(180deg);
         transition:1s cubic-bezier(0.22, 1, 0.36, 1); 
+        opacity: 0;
         &:nth-of-type(2){
-            top: -5%;   
+            top: 5%;   
             right: 1.5%;
             transform: rotate(0);
         }

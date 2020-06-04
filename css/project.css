@@ -656,7 +656,7 @@ html.search {
       transition: 0.3s; }
   .background h3 {
     position: absolute;
-    top: -5%;
+    top: 5.1%;
     right: 6.25%;
     transform: translateX(50%);
     z-index: 100;
@@ -670,7 +670,7 @@ html.search {
     cursor: pointer;
     background: none;
     position: absolute;
-    top: -5%;
+    top: 5%;
     right: 9.8%;
     transform: translateX(50%);
     z-index: 100;

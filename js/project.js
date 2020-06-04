@@ -309,7 +309,7 @@ xhr.onload = function () {
     //번호변경 end
 }
 
-xhr.open('GET', '/js/data.json', true);        // Prepare the request
+xhr.open('GET', '../js/data.json', true);        // Prepare the request
 xhr.send(null);                                 // Send the request
 
 

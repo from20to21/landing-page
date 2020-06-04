@@ -370,13 +370,24 @@ html.search {
   position: relative;
   overflow: hidden; }
 
+.close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  z-index: 100;
+  display: block; }
+  .close img {
+    width: 20px; }
+
 .filter {
   width: 12.5%;
   position: absolute;
   top: 5%;
   left: 0%;
   z-index: 40;
-  display: flex;
+  display: none;
   flex-direction: column;
   transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1); }
   .filter__search {
@@ -599,5 +610,253 @@ html.search {
     font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.9);
     transition: 1s cubic-bezier(0.22, 1, 0.36, 1); }
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; }
+
+  .close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 100;
+    display: block; }
+    .close img {
+      width: 20px; }
+
+  .filter {
+    width: 12.5%;
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    z-index: 40;
+    display: none;
+    flex-direction: column;
+    transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1); }
+    .filter__search {
+      position: relative;
+      transform: translateY(-30%);
+      opacity: 0;
+      transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1); }
+      .filter__search .close {
+        border: none;
+        outline-style: none;
+        cursor: pointer;
+        background: none;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 3%;
+        right: 13%; }
+        .filter__search .close img {
+          width: 15px; }
+      .filter__search input {
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        background: none;
+        outline: none;
+        width: 80%;
+        height: 30px;
+        padding: 15px;
+        font-weight: 100;
+        font-size: 0.8rem;
+        letter-spacing: 0.01rem;
+        margin-left: 7%;
+        margin-bottom: 15%;
+        color: rgba(255, 255, 255, 0.9); }
+        .filter__search input::placeholder {
+          color: rgba(255, 255, 255, 0.7); }
+      .filter__search .search {
+        border: none;
+        outline-style: none;
+        cursor: pointer;
+        background: none;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 6%;
+        right: 13%; }
+        .filter__search .search img {
+          width: 15px; }
+    .filter__title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: rgba(255, 255, 255, 0.9);
+      text-align: left;
+      margin-left: 7%;
+      margin-bottom: 15%;
+      opacity: 0;
+      transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1); }
+    .filter__category li {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.9rem;
+      font-weight: 100;
+      line-height: 1.7rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: -10%;
+      margin-right: 30%;
+      margin-bottom: 5%;
+      opacity: 0;
+      transition: 1s ease-in-out; }
+      .filter__category li:nth-of-type(1) {
+        margin-bottom: 15%; }
+      .filter__category li:nth-of-type(4) {
+        margin-bottom: 15%; }
+      .filter__category li:nth-of-type(6) {
+        margin-bottom: 15%; }
+      .filter__category li button {
+        border: none;
+        outline-style: none;
+        cursor: pointer;
+        background: none;
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        width: 13px;
+        height: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .filter__category li button img {
+          opacity: 0;
+          width: 8px; }
+        .filter__category li button.checked img {
+          opacity: 1;
+          width: 8px; }
+
+  .project {
+    position: absolute;
+    top: 0;
+    left: 12.5%;
+    z-index: 40;
+    width: 75%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: auto; }
+    .project::-webkit-scrollbar {
+      display: none; }
+    .project__contents {
+      width: 400px;
+      height: 400px;
+      background: rgba(137, 137, 137, 0.2);
+      margin-top: 2.5%;
+      position: relative;
+      opacity: 0;
+      transition: 1s ease-in-out;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1); }
+      .project__contents::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0; }
+      .project__contents.contents01 {
+        background: url("../img/pic_main/zara01.jpg") no-repeat center/cover; }
+        .project__contents.contents01::after {
+          background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); }
+      .project__contents.contents02 {
+        background: url("../img/pic_main/bml01.jpg") no-repeat center/cover; }
+        .project__contents.contents02::after {
+          background: linear-gradient(0deg, rgba(237, 146, 78, 0.8), rgba(237, 146, 78, 0)); }
+      .project__contents.contents03 {
+        background: url("../img/pic_main/korea01.jpg") no-repeat center/cover; }
+        .project__contents.contents03::after {
+          background: linear-gradient(0deg, rgba(18, 169, 228, 0.8), rgba(18, 169, 228, 0)); }
+      .project__contents.contents04 {
+        background: url("../img/pic_main/portfolio.jpg") no-repeat center/cover; }
+        .project__contents.contents04::after {
+          background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)); }
+      .project__contents__title {
+        font-size: 1.6rem;
+        font-weight: bold;
+        position: absolute;
+        z-index: 20;
+        bottom: 18%;
+        left: 5%;
+        color: #333; }
+      .project__contents button {
+        position: absolute;
+        z-index: 20;
+        bottom: 7%;
+        left: 5%;
+        border: none;
+        outline-style: none;
+        cursor: pointer;
+        background: none;
+        width: 30%;
+        height: 30px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+        border: 1px solid #333;
+        transition: .3s ease-in-out; }
+        .project__contents button:hover {
+          background: rgba(255, 255, 255, 0.9); }
+      .project__contents h4 {
+        font-size: 1rem;
+        color: #666;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+
+  .background {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex; }
+    .background .area {
+      width: 12.5%;
+      height: 100vh;
+      transition: .1s;
+      position: absolute;
+      left: 0;
+      top: 0;
+      overflow: hidden; }
+      .background .area:nth-of-type(1) {
+        left: 0%;
+        z-index: 30; }
+      .background .area:nth-of-type(2) {
+        left: 12.5%;
+        z-index: 26; }
+      .background .area:nth-of-type(3) {
+        left: 25%;
+        z-index: 22; }
+      .background .area:nth-of-type(4) {
+        left: 37.5%;
+        z-index: 18; }
+      .background .area:nth-of-type(5) {
+        left: 50%;
+        z-index: 14; }
+      .background .area:nth-of-type(6) {
+        left: 62.5%;
+        z-index: 10; }
+      .background .area:nth-of-type(7) {
+        left: 75%;
+        z-index: 6; }
+      .background .area:nth-of-type(8) {
+        left: 87.5%;
+        z-index: 2; }
+      .background .area__wrapper {
+        width: 100%;
+        height: 100%;
+        background: -webkit-linear-gradient(90deg, #2e2e34, #171b1f);
+        background: linear-gradient(90deg, #2e2e34, #171b1f);
+        transition: 0.3s; }
+    .background h3 {
+      position: absolute;
+      top: -5%;
+      right: 6.25%;
+      transform: translateX(50%);
+      z-index: 100;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.9);
+      transition: 1s cubic-bezier(0.22, 1, 0.36, 1); } }
 
 /*# sourceMappingURL=projectList.css.map */

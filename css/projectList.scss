@@ -5,12 +5,24 @@
     position: relative;
     overflow: hidden;
 }
+.close{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top:5%;
+    left: 5%;
+    z-index: 100;
+    display: block;
+    & img{
+        width: 20px;
+    }
+}
 .filter{
     width: 12.5%;
     position: absolute;
     top: 5%; left: 0%;
     z-index: 40;
-    display: flex;
+    display: none;
     flex-direction: column;
     transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1);
     &__search{
@@ -227,4 +239,249 @@
         color: rgba(255,255,255,0.9);
         transition:1s cubic-bezier(0.22, 1, 0.36, 1); 
     }
+}
+
+
+@media all and (min-width:768px) and (max-width:1023px) { 
+    .wrapper{
+        @include size(100%);
+        position: relative;
+        overflow: hidden;
+    }
+    .close{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top:5%;
+        left: 5%;
+        z-index: 100;
+        display: block;
+        & img{
+            width: 20px;
+        }
+    }
+    .filter{
+        width: 12.5%;
+        position: absolute;
+        top: 5%; left: 0%;
+        z-index: 40;
+        display: none;
+        flex-direction: column;
+        transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+        &__search{
+            position: relative;
+            transform: translateY(-30%);
+            opacity: 0;
+            transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+            & .close{
+                @include button_reset;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top:3%; right:13%;
+                & img{
+                    width: 15px;
+                }
+            }
+            & input{
+                border: 1px solid rgba(255,255,255,0.9);
+                background: none;
+                outline: none;
+                width: 80%;
+                height: 30px;
+                padding: 15px;
+                font-weight: 100;
+                font-size: 0.8rem;
+                letter-spacing: 0.01rem;
+                margin-left: 7%;
+                margin-bottom: 15%;
+                color:rgba(255,255,255,0.9);
+                &::placeholder{
+                    color: rgba(255,255,255,0.7);
+                }
+            }
+            & .search{
+                @include button_reset;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top:6%; right:13%;
+                & img{
+                    width: 15px;
+                }
+            }
+        }
+        &__title{
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: rgba(255,255,255,0.9);
+            text-align: left;
+            margin-left: 7%;
+            margin-bottom: 15%;
+            opacity: 0;
+            transition: 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        &__category{
+            & li{
+                color:rgba(255,255,255,0.9);
+                font-size:0.9rem;
+                font-weight: 100;
+                line-height: 1.7rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-left: -10%;
+                margin-right: 30%;
+                margin-bottom: 5%;
+                opacity: 0;
+                transition: 1s ease-in-out;
+                &:nth-of-type(1){
+                    margin-bottom: 15%;
+                }
+                &:nth-of-type(4){
+                    margin-bottom: 15%;
+                }
+                &:nth-of-type(6){
+                    margin-bottom: 15%;
+                }
+                & button{
+                    @include button_reset;
+                    border: 1px solid rgba(255,255,255,0.9);
+                    width: 13px;
+                    height: 13px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    & img{
+                        opacity: 0;
+                        width: 8px;
+                    }
+                    &.checked img{
+                        opacity: 1;
+                        width: 8px;
+                    }
+                }
+            }
+        }
+    }
+    .project{
+        position: absolute;
+        top: 0;
+        left: 12.5%;
+        z-index: 40;
+        @include size(75%);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        overflow: auto;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        &__contents{
+            width: 400px;
+            height: 400px;
+            background: rgba(137,137,137,0.2);
+            margin-top: 2.5%;
+            position: relative;
+            opacity: 0;
+            transition: 1s ease-in-out;
+            @include box_shadow;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top:0; left:0;
+            }
+            &.contents01{
+                @include bg_center('../img/pic_main/zara01.jpg');
+                &::after{
+                    background: linear-gradient(0deg, rgba(255, 255, 255,0.8), rgba(255, 255, 255,0));
+                }
+            }
+            &.contents02{
+                @include bg_center('../img/pic_main/bml01.jpg');
+                &::after{
+                    background: linear-gradient(0deg, rgba(237, 146, 78,0.8), rgba(237, 146, 78,0));
+                }
+            }
+            &.contents03{
+                @include bg_center('../img/pic_main/korea01.jpg');
+                &::after{
+                    background: linear-gradient(0deg, rgba(18, 169, 228,0.8), rgba(18, 169, 228,0));
+                }
+            }
+            &.contents04{
+                @include bg_center('../img/pic_main/portfolio.jpg');
+                &::after{
+                    background: linear-gradient(0deg, rgba(255, 255, 255,0.8), rgba(255, 255, 255,0));
+                }
+            }
+            &__title{
+                font-size: 1.6rem;
+                font-weight: bold;
+                position: absolute;
+                z-index: 20;
+                bottom: 18%;
+                left: 5%;
+                color: #333;
+            }
+            & button{
+                position: absolute;
+                z-index: 20;
+                bottom: 7%;
+                left: 5%;
+                @include button_reset;
+                width: 30%;
+                height: 30px;
+                @include box_shadow;
+                border: 1px solid #333;
+                transition: .3s ease-in-out;
+                &:hover{
+                    background: rgba(255,255,255,0.9);
+                }
+            }
+            & h4{
+                font-size: 1rem;
+                color: #666;
+                @include absol_center;
+            }
+        }
+    }
+    .background{
+        @include size(100%);
+        position: relative;
+        display: flex;
+        & .area{
+            @include size(12.5%);
+            transition: .1s;
+            position: absolute;
+            left: 0;top:0;
+            overflow: hidden;
+            @for $i from 1 to 9{ 
+                &:nth-of-type(#{$i}){     
+                    left: 12.5 * ($i - 1) * 1%;
+                    z-index: 34-(4 * $i);
+                }
+            }
+            &__wrapper{
+                width: 100%;
+                height: 100%;
+                background: -webkit-linear-gradient(90deg, rgb(46, 46, 52), rgb(23, 27, 31));
+                background: linear-gradient(90deg, rgb(46, 46, 52), rgb(23, 27, 31));
+                transition: 0.3s;
+            }
+        }
+        & h3{
+            position: absolute;
+            top: -5%; right: 6.25%;
+            transform: translateX(50%);
+            z-index: 100;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
+            transition:1s cubic-bezier(0.22, 1, 0.36, 1); 
+        }
+    }
+    
 }

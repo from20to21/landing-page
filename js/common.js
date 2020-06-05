@@ -43,7 +43,7 @@ function menuToggle() {
             $('.title').css({
                 opacity: 1
             });
-            $('.scroll').css({
+            $('.scroll, .tabletBtn').css({
                 opacity: 1
             });
         }, 1000);
@@ -71,12 +71,12 @@ function menuToggle() {
         $('.menu__button').css({
             zIndex: 100
         });
-        $('.scroll').css({
+        $('.scroll,.tabletBtn').css({
             opacity: 0
         });
         //background 등장
         $('.menu__background').css({
-            zIndex: 70
+            zIndex: 80
         })
         setTimeout(function () {
             for (var i = 1; i < 9; i++) {

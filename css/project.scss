@@ -224,6 +224,7 @@
     transform: translateX(-50%);
     width: 20px;
     height: 20px;
+    opacity: 0;
     @include bg_center('../img/down.png');
     z-index: 100;
     display: none;
@@ -551,6 +552,7 @@
         transform: translateX(-50%);
         width: 20px;
         height: 20px;
+        opacity: 0;
         @include bg_center('../img/down.png');
         z-index: 100;
         display: block;

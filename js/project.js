@@ -77,12 +77,11 @@ xhr.onload = function () {
             else {
                 contentsShowPc();
             }
-
             numChange('leftTab__number', ' .change', '', 1);
             numChange('backNum', '', '0', 1);
         }, 2500);
         setTimeout(function () {
-            $('.scroll').css({
+            $('.scroll, .tabletBtn').css({
                 opacity: 1
             });
         }, 3000);

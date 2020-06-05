@@ -581,6 +581,7 @@ html.search {
   transform: translateX(-50%);
   width: 20px;
   height: 20px;
+  opacity: 0;
   background: url("../img/down.png") no-repeat center/cover;
   z-index: 100;
   display: none; }
@@ -920,6 +921,7 @@ html.search {
     transform: translateX(-50%);
     width: 20px;
     height: 20px;
+    opacity: 0;
     background: url("../img/down.png") no-repeat center/cover;
     z-index: 100;
     display: block; }

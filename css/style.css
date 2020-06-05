@@ -92,6 +92,10 @@ html.search {
   transform: translate(50%, -50%);
   opacity: 0;
   width: 30px;
+  border: none;
+  outline-style: none;
+  cursor: pointer;
+  background: none;
   height: 30px;
   display: flex;
   flex-direction: column;
@@ -250,7 +254,7 @@ html.search {
       transition: 0.3s cubic-bezier(0.22, 1, 0.36, 1); }
     .menu__button.open span:nth-of-type(1) {
       width: 30px;
-      transform: rotate(45deg) translateY(17px); }
+      transform: rotate(45deg) translateY(19px); }
     .menu__button.open span:nth-of-type(2) {
       width: 0; }
     .menu__button.open span:nth-of-type(3) {

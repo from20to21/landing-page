@@ -421,7 +421,7 @@
             transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
             filter: grayscale(1) brightness(30%) opacity(60%);
             &.img01{
-                 @include bg_center('../img/pic_main/zara02.jpg');
+                @include bg_center('../img/pic_main/zara02.jpg');
             }
             &.img02{
                 top:125%;
@@ -433,7 +433,7 @@
             }
             &.img04{
                 top: 275%;
-                @include bg_center('../img/pic_main/zara01.jpg');
+                @include bg_center('../img/pic_main/zara02.jpg');
             }
             &.selected{
                 transform: translate(-50%,-50%) scale(1.3);

@@ -394,6 +394,7 @@
             text-align: right;
             font-weight: 100;
             margin-bottom: 10px;
+            white-space: pre;
         }
 }
     
@@ -851,7 +852,7 @@
                 text-align: right;
                 font-weight: 100;
                 margin-bottom: 10px;
-                word-break: keep-all;
+                white-space: pre;
             }
     }
         

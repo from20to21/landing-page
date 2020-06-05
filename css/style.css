@@ -244,15 +244,13 @@ html.search {
     justify-content: space-between;
     transition: 1s cubic-bezier(0.22, 1, 0.36, 1); }
     .menu__button span {
-      width: 18px;
+      width: 30px;
       height: 3px;
       background: #fff;
       transition: 0.3s cubic-bezier(0.22, 1, 0.36, 1); }
-      .menu__button span:nth-of-type(2) {
-        width: 30px; }
     .menu__button.open span:nth-of-type(1) {
       width: 30px;
-      transform: rotate(45deg) translateY(18px); }
+      transform: rotate(45deg) translateY(17px); }
     .menu__button.open span:nth-of-type(2) {
       width: 0; }
     .menu__button.open span:nth-of-type(3) {

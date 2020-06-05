@@ -47,7 +47,7 @@ function start() {
             var filter = filterShow(i, 'project__contents', '0');
             filter();
         }
-    }, 3000);
+    }, 2000);
     //컨텐츠 등장 end
 }
 //시작이벤트 end

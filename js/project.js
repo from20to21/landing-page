@@ -97,7 +97,10 @@ xhr.onload = function () {
             clickBln = false;
             $('.leftTab__text').removeClass('selected');
             $(this).addClass('selected');
-            a = $('.leftTab').find($('.selected')).data().num - 1;
+            a = $('.leftTab').find($('.selected')).data().num-1;
+            if(a==0){
+                a=3;
+            }
             slideScroll();
         }
         setTimeout(function () {

@@ -113,6 +113,11 @@ function start() {
             D();
         }
     }, 2800);
+    setTimeout(function () {
+        $('.about__spec__softSkils p.03').css({
+            right:'40%'
+        });
+    }, 5000);
 }
 
 //스킬관련 그래프

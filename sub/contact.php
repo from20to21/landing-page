@@ -96,11 +96,11 @@
         <!-- footer -->
         <div class="footer">
             <button class="git"></button>
-            <a href="#" class="resume">
-                이력서다운로드
-                <img src="../img/archive.png" alt="">
-            </a>
-            <p>COPYRIGHT 2020 &copy LEE SEUNG HYUN</p>
+            <div class="footer__resume">
+                <p>이력서다운로드</p>
+                <a href="../img/이승현_이력서.pdf" target="_blank"></a>
+            </div>
+            <p>COPYRIGHT 2020 &copy; LEE SEUNG HYUN</p>
         </div>
         <!-- footer end -->
     </div>

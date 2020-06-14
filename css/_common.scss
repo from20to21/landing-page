@@ -228,14 +228,19 @@ html.search{
       height: 30px;
       @include bg_center('../img/social-media.png');
   }
-  & .resume{
+  &__resume{
       display: flex;
       align-items: center;
-      color: rgba(255,255,255,0.8);
-      font-size: 0.9rem;
-      & img{
+      & p{
+          color: rgba(255,255,255,0.8);
+          font-size: 0.9rem;
+      }
+      & a{
+          display: block;
           width: 15px;
+          height: 15px;
           margin-left: 5px;
+          background: url(../img/archive.png) no-repeat center /cover;
       }
   }
   & p{
@@ -370,16 +375,21 @@ html.search{
       height: 30px;
       @include bg_center('../img/social-media.png');
   }
-  & .resume{
-      display: flex;
-      align-items: center;
-      color: rgba(255,255,255,0.8);
-      font-size: 0.9rem;
-      & img{
-          width: 15px;
-          margin-left: 5px;
-      }
-  }
+  &__resume{
+    display: flex;
+    align-items: center;
+    & p{
+        color: rgba(255,255,255,0.8);
+        font-size: 0.9rem;
+    }
+    & a{
+        display: block;
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
+        background: url(../img/archive.png) no-repeat center /cover;
+    }
+}
   & p{
       color: rgba(255,255,255,0.5);
       font-size: 0.5rem;
@@ -511,16 +521,21 @@ html.search{
       height: 30px;
       @include bg_center('../img/social-media.png');
   }
-  & .resume{
-      display: flex;
-      align-items: center;
-      color: rgba(255,255,255,0.8);
-      font-size: 0.9rem;
-      & img{
-          width: 15px;
-          margin-left: 5px;
-      }
-  }
+  &__resume{
+    display: flex;
+    align-items: center;
+    & p{
+        color: rgba(255,255,255,0.8);
+        font-size: 0.9rem;
+    }
+    & a{
+        display: block;
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
+        background: url(../img/archive.png) no-repeat center /cover;
+    }
+}
   & p{
       color: rgba(255,255,255,0.5);
       font-size: 0.5rem;

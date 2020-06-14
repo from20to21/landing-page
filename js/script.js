@@ -117,8 +117,3 @@ function g3() {
     }
 }
 //원그리기 end
-
-
-//파일다운로드 구현
-$('a#someID').attr({target: '_blank', 
-                    href  : 'http://localhost/directory/file.pdf'});

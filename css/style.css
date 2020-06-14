@@ -207,14 +207,18 @@ html.search {
     width: 30px;
     height: 30px;
     background: url("../img/social-media.png") no-repeat center/cover; }
-  .footer .resume {
+  .footer__resume {
     display: flex;
-    align-items: center;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem; }
-    .footer .resume img {
+    align-items: center; }
+    .footer__resume p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.9rem; }
+    .footer__resume a {
+      display: block;
       width: 15px;
-      margin-left: 5px; }
+      height: 15px;
+      margin-left: 5px;
+      background: url(../img/archive.png) no-repeat center/cover; }
   .footer p {
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.5rem; }
@@ -353,14 +357,18 @@ html.search {
       width: 30px;
       height: 30px;
       background: url("../img/social-media.png") no-repeat center/cover; }
-    .footer .resume {
+    .footer__resume {
       display: flex;
-      align-items: center;
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 0.9rem; }
-      .footer .resume img {
+      align-items: center; }
+      .footer__resume p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.9rem; }
+      .footer__resume a {
+        display: block;
         width: 15px;
-        margin-left: 5px; }
+        height: 15px;
+        margin-left: 5px;
+        background: url(../img/archive.png) no-repeat center/cover; }
     .footer p {
       color: rgba(255, 255, 255, 0.5);
       font-size: 0.5rem; } }
@@ -498,14 +506,18 @@ html.search {
       width: 30px;
       height: 30px;
       background: url("../img/social-media.png") no-repeat center/cover; }
-    .footer .resume {
+    .footer__resume {
       display: flex;
-      align-items: center;
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 0.9rem; }
-      .footer .resume img {
+      align-items: center; }
+      .footer__resume p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.9rem; }
+      .footer__resume a {
+        display: block;
         width: 15px;
-        margin-left: 5px; }
+        height: 15px;
+        margin-left: 5px;
+        background: url(../img/archive.png) no-repeat center/cover; }
     .footer p {
       color: rgba(255, 255, 255, 0.5);
       font-size: 0.5rem; } }

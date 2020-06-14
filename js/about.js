@@ -48,7 +48,7 @@ function start() {
     }, 600);
     setTimeout(function () {
         $('.about__title').find('span').css({
-            top: '18.9%'
+            top: '19.2%'
         });
     }, 1300);
     setTimeout(function () {

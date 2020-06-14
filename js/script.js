@@ -19,23 +19,20 @@ function start() {
         var BgShow = bgShow(i, "background", " .area__wrapper", 0, '100%', 100);
         BgShow();
     } //background 등장
-
     setTimeout(function () {
         $('.title').css({
             opacity: 1,
             left: titleLeft
         })
     }, 1300); //title 등장
-
     setTimeout(function () {
         $('.footer').css({
             bottom: '40px'
         })
     }, 1600); //footer 등장
-
     setTimeout(function () {
         window.location.href = "sub/about.html";
-    }, 4000); //about페이지로 이동
+    }, 5000); //about페이지로 이동
 }
 
 //background등장
@@ -123,5 +120,5 @@ function g3() {
 
 
 //파일다운로드 구현
-// $('a#someID').attr({target: '_blank', 
-//                     href  : 'http://localhost/directory/file.pdf'});
+$('a#someID').attr({target: '_blank', 
+                    href  : 'http://localhost/directory/file.pdf'});
